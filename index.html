@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>sentimentalfuturist.net</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌌</text></svg>"
+    />
+  </head>
+  <body>
+    <header>
+      <h1><a href="/" id="header-link">sentimental futurist</a></h1>
+      <span id="tagline"></span>
+    </header>
+    <main class="grid">
+      <section class="item hello">
+        <div class="content">
+          <h1>hello</h1>
+          <p>
+            Welcome to my personal website. Here I host and gather my web
+            projects and experiments.
+          </p>
+          <p>
+            This website is perpetually under construction. I want to think of
+            it as some sort of digital garden I like to tend to, where small
+            things will eventually grow.
+          </p>
+          <div>Number of visitors: <div id="stats"></div></div>
+
+<script>
+    var r = new XMLHttpRequest();
+    r.addEventListener('load', function() {
+        document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
+    })
+    r.open('GET', 'https://sentimentalfuturist.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+    r.send()
+</script>
+          <div class="joined">
+            <p>
+              <script src="https://xandra.cc/safonts/webring.js" defer></script>
+              <ring-900 site="https://sentimentalfuturist.net/"></ring-900>
+            </p>
+            <p>
+              <a
+                href="https://webri.ng/webring/genlissa/previous?via=https://sentimentalfuturist.net/"
+                target="_blank"
+                >&laquo;</a
+              >&nbsp;<a href="https://genlissa.neocities.org/" target="_blank"
+                >I'm Gen Lissa</a
+              >&nbsp;&nbsp;<a
+                href="https://webri.ng/webring/genlissa/random?via=https://sentimentalfuturist.net/"
+                target="_blank"
+                >???</a
+              >&nbsp;<a
+                href="https://webri.ng/webring/genlissa/next?via=https://sentimentalfuturist.net/"
+                target="_blank"
+                >&raquo;</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://webri.ng/webring/ladiesofthelinks/previous?via=https%3A%2F%2Fsentimentalfuturist.net/"
+                >&laquo;</a
+              >
+              &nbsp;<a href="https://ladiesofthe.link/">Ladies of the Links</a
+              >&nbsp;
+
+              <a
+                href="https://webri.ng/webring/ladiesofthelinks/random?via=https%3A%2F%2Fsentimentalfuturist.net/"
+                >???</a
+              >&nbsp;
+
+              <a
+                href="https://webri.ng/webring/ladiesofthelinks/next?via=https%3A%2F%2Fsentimentalfuturist.net/"
+                >&raquo;</a
+              >
+            </p>
+            <p class="sprites">
+              <a href="https://ac.kuchiki.net/" class="image-link">
+                <img src="images/joined/stella.gif" alt="Stella" title="Stella"
+              /></a>
+              <a href="https://ac.kuchiki.net/" class="image-link">
+                <img src="images/joined/carmen.gif" alt="Carmen" title="Carmen"
+              /></a>
+              <a href="https://ac.kuchiki.net/" class="image-link">
+                <img
+                  src="images/joined/blathers.gif"
+                  alt="Blathers"
+                  title="Blathers"
+                />
+              </a>
+            </p>
+          </div>
+          <p class="last-updated">
+            Last updated: <span id="update-date"></span>
+          </p>
+          <div class="moonphase"></div>
+        </div>
+      </section>
+      <section class="item projects">
+        <div class="content">
+          <h1>some projects</h1>
+          <p>Stuff I've done. Hope to add more things to the list soon-ish!</p>
+
+          <ul>
+            <li>
+              <a href="https://senti.bearblog.dev/" rel="external"
+                >Personal blog</a
+              >
+              [ES]
+            </li>
+            <li>
+              <a href="https://thoughts.sentimentalfuturist.net"
+                >Thoughts page</a
+              >
+              [EN]
+            </li>
+            <li>
+              <a href="https://sentimentalfuturist.net/art"
+                >Some of my doodles</a
+              >
+              [EN]
+            </li>
+            <li>
+              <a href="https://fan.sentimentalfuturist.net/"
+                >Joined fanlistings</a
+              >
+              [EN]
+            </li>
+            <li>
+              <a href="https://www.silviaortiz.net" rel="external"
+                >Professional portfolio</a
+              >
+              [ES]
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="item about">
+        <div class="content">
+          <h1>about this place</h1>
+          <p>
+            This is my operations center of sorts, to host my pages and various
+            projects. All of them are created for my own amusement, but if
+            anyone finds them interesting or entertaining, then that makes me
+            extra happy &#9825;
+          </p>
+          <p>
+            This main page is coded by hand in vscode and is plain HTML,
+            Sass/CSS and a bit of Javascript. It's intended to be
+            mobile/ipad/high-resolution/whatever-friendly.
+          </p>
+          <p>
+            Previously this website was <em>shirubia.net</em>; I'm fond of that
+            name, but kinda got tired of it as it was too personal, too me.
+            <em>Sentimental futurist</em> is a title that still speaks about the
+            person, but it's a rather indistinct identity that makes me feel
+            more confortable (if that makes sense).
+          </p>
+        </div>
+      </section>
+      <section class="item about-me">
+        <div class="content">
+          <h1>about me</h1>
+          <dl>
+            <dt>sentimental</dt>
+            <dd>
+              <em>adj.</em> of or prompted by feelings of tenderness, sadness,
+              or nostalgia.
+            </dd>
+            <dt>futurist</dt>
+            <dd>
+              <em>noun.</em> one whose chief interests are in what is to come;
+              one who anxiously, eagerly, or confidently looks forward to the
+              future; an expectant.
+            </dd>
+          </dl>
+          <p>(That sums me up, pretty much).</p>
+          <p>
+            Name's <mark>Silvia</mark> <sup>(she/they)</sup>. Front-end
+            developer by day, fanfiction reader by night. Or something. I go by
+            many other names: I used to be known as Shirubia and you can call me
+            Sil, Shiru, Senti or whatever.
+          </p>
+          <p>
+            Ever since I was eight, I wanted a computer of my own; it took
+            another eight years for my wish to come true. In 2002 I created my
+            first website in Geocities with a WYSIWYG editor (with starry
+            background and all), and since then I've inhabited the internets
+            with various blogs and small personal projects.
+          </p>
+          <p>
+            Now I do for a living the same things I do for fun: stare at a
+            computer screen for hours on end and perpetrate code. Which probably
+            means I'm not right in the head. But at least my coding skills are
+            better now... Slightly ☺
+          </p>
+        </div>
+      </section>
+      <section class="item now">
+        <div class="content">
+          <h1>now</h1>
+          <div id="statuscafe">
+            <div id="statuscafe-username"></div>
+            <div id="statuscafe-content"></div>
+          </div>
+          <script
+            src="https://status.cafe/current-status.js?name=sentimentalfuturist"
+            defer
+          ></script>
+          <ul>
+            <li>
+              <strong>listening:</strong> some podcasts (<a
+                href="https://www.astrobitacora.com"
+                rel="external"
+                >Astrobitácora</a
+              >,
+              <a
+                href="https://www.ivoox.com/podcast-no-me-da-vida_sq_f11192667_1.html"
+                rel="external"
+                >No me da la vida</a
+              >)
+            </li>
+            <li>
+              <strong>reading:</strong> fanfiction
+              <!-- <a
+                href="https://app.thestorygraph.com/currently-reading/shirubia"
+                rel="external"
+                >something, probably</a
+              > -->
+            </li>
+            <li><strong>playing:</strong> Animal Crossing New Horizons, WoW</li>
+            <li>
+              <strong>watching:</strong> Northern Exposure S6, The X-Files S5.
+              Also re-watching Utena
+            </li>
+            <li>
+              <strong>learning:</strong>
+              <a href="https://tailwindfromscratch.com/" rel="external"
+                >Tailwind CSS</a
+              >, knitting 🧶
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="item links">
+        <div class="content">
+          <h1>links</h1>
+          <p>Awesome websites made by awesome people:</p>
+          <p>
+            <a href="https://fictioninfiction.net/" class="image-link"
+              ><img
+                src="images/links/janna.png"
+                alt="Fiction in Fiction - Janna"
+            /></a>
+            <a href="https://www.diletante.net/" class="image-link"
+              ><img src="images/links/calitoe.gif" alt="Diletante - Calítoe"
+            /></a>
+          </p>
+          <h1>link me?</h1>
+          <p>
+            You can link me with a plain text link or with one of these buttons:
+          </p>
+          <p>
+            <img
+              src="images/linkme/100x50_senti.png"
+              alt="100x50 button"
+              title="100x50 button"
+            />
+            <img
+              src="images/linkme/100x35_senti.png"
+              alt="100x35 button"
+              title="100x35 button"
+            />
+
+            <img
+              src="images/linkme/88x31_senti.png"
+              alt="88x31 button"
+              title="88x31 button"
+            />
+          </p>
+        </div>
+      </section>
+      <section class="item contact">
+        <div class="content">
+          <h1>contact</h1>
+
+          <p>You can send me an e-mail at:</p>
+          <p class="email">
+            <strong>the&#xFF20;sentimentalfuturist&#x2024;net</strong>
+          </p>
+          <p>
+            (...but
+            <a
+              href="https://lea.verou.me/2009/11/yet-another-email-hiding-technique/"
+              rel="external"
+              >don't copy/paste it</a
+            >).
+          </p>
+
+          <h2>find me elsewhere</h2>
+          <ul>
+            <li>
+              <a
+                href="https://app.thestorygraph.com/profile/shirubia"
+                rel="external"
+                >The StoryGraph</a
+              >
+            </li>
+            <li>
+              <a href=" https://www.goodreads.com/shirubia" rel="external"
+                >Goodreads</a
+              >
+            </li>
+            <li>
+              <a href="https://sentimentalfuturist.tumblr.com/" rel="external"
+                >Tumblr</a
+              >
+            </li>
+            <li>
+              <a href="https://letterboxd.com/Shirubia/" rel="external"
+                >Letterboxd</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.tvtime.com/es/user/15046398/profile"
+                rel="external"
+                >TV Time</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="item buttons">
+        <div class="content">
+          <h1>buttons :)</h1>
+          <div class="buttons-grid">
+            <img src="images/buttons/affection.gif" alt="made with affection" />
+            <img src="images/buttons/anybrow.gif" alt="view with any browser" />
+            <img
+              src="images/buttons/anydamn.gif"
+              alt="view with any (damn) browser"
+            />
+            <img src="images/buttons/camtime.png" alt="ban time travel NOW" />
+            <img
+              src="images/buttons/fastweb.gif"
+              alt="a fast web??? we've got it! here"
+            />
+            <img src="images/buttons/flash.gif" alt="flash free web" />
+            <img src="images/buttons/geocitieswww.gif" alt="Geocities" />
+            <img src="images/buttons/GUTENBRG.gif" alt="Project Gutenberg" />
+            <img
+              src="images/buttons/ieexplode.gif"
+              alt="Microsoft Internet Exploder"
+            />
+            <img src="images/buttons/lovenow.gif" alt="made with love" />
+            <img src="images/buttons/privacynow.jpg" alt="privacy now" />
+            <img
+              src="images/buttons/winamp-miniban.gif"
+              alt="built listening to winamp"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="item credits">
+        <div class="content">
+          <h1>credits</h1>
+          <ul>
+            <li>
+              Privacy-friendly, open source web analytics thanks to
+              <a href="https://www.goatcounter.com/" rel="external"
+                >GoatCounter</a
+              >
+            </li>
+            <li>
+              <em>Vintage</em> buttons from
+              <a
+                href="https://anlucas.neocities.org/88x31Buttons"
+                rel="external"
+                >A.N. Lucas's</a
+              >
+              collection
+            </li>
+            <li>
+              Colors from this
+              <a
+                href="https://coolors.co/palette/eae4e9-fff1e6-fde2e4-fad2e1-e2ece9-bee1e6-f0efeb-dfe7fd-cddafd"
+                rel="external"
+                >palette</a
+              >
+            </li>
+            <li>
+              Layout designed with the help of this
+              <a
+                href="https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe"
+                rel="external"
+                >responsive CSS grid tutorial</a
+              >
+              and this
+              <a
+                href="https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb"
+                rel="external"
+                >masonry tutorial</a
+              >
+            </li>
+            <li>
+              Hosted by <a href="https://leprd.space" rel="external">Leprd</a> 🫶
+            </li>
+            <li>God bless ibuprofen</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <a href="/">sentimentalfuturist.net</a> · perpetrated in the future
+        <span id="year"></span>
+        <br />
+        <a
+          href="https://nonbot.org/pledged/view/9a178d13-127a-4b34-845d-dd58323ca1bd"
+          target="_blank"
+          class="image-link"
+        >
+          <img
+            style="height: 128px"
+            src="https://nonbot.org/images/nonbot_pledged_logo.svg"
+            alt="Human-made Content"
+          />
+        </a>
+      </p>
+    </footer>
+    <script
+      src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"
+      defer
+    ></script>
+    <script src="js/scripts.js" defer></script>
+    <script
+      data-goatcounter="https://sentimentalfuturist.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+  </body>
+</html>

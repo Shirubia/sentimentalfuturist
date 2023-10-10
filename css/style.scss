@@ -1,0 +1,262 @@
+// Colors
+$lightyellow: #faf3dd;
+$white: #fff;
+$black: #222;
+$cerise: #da4167;
+
+$fontcolor: $black;
+$linkcolor: $cerise;
+
+body {
+  font-family: "EB Garamond", serif;
+  font-size: 1.225rem;
+  color: $fontcolor;
+  hyphens: auto;
+  background-color: #fffaf7;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  &:link {
+    color: $linkcolor;
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $linkcolor;
+    text-decoration: double;
+  }
+  &:hover:not(.image-link) {
+    text-decoration: none;
+    color: $white;
+    background-color: $linkcolor;
+  }
+  &:active:not(.image-link) {
+    text-decoration: none;
+    color: $white;
+    background-color: $linkcolor;
+  }
+  &[rel="external"]:after {
+    content: "↗";
+  }
+}
+
+header {
+  margin: 2rem 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  h1 {
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.5rem;
+    hyphens: manual;
+  }
+  a#header-link {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $black;
+      text-decoration: none;
+      border: 0;
+      background-color: transparent;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  #tagline {
+    font-style: italic;
+    color: $black;
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    margin: 1.6rem 0;
+  }
+}
+
+main.grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 50px;
+  grid-gap: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  section {
+    background-color: $white;
+    .content {
+      padding: 1rem;
+    }
+    &.hello,
+    &.buttons {
+      border-top: 1px solid #eae4e9;
+      border-bottom: 10px solid #eae4e9;
+      border-left: 1px solid #eae4e9;
+      border-right: 1px solid #eae4e9;
+      .buttons-grid {
+        margin: 0 auto;
+        text-align: center;
+        > img {
+          width: 88px;
+          height: 31px;
+          border: 0;
+        }
+      }
+    }
+    &.projects,
+    &.credits {
+      border-top: 1px solid #fde2e4;
+      border-bottom: 10px solid #fde2e4;
+      border-left: 1px solid #fde2e4;
+      border-right: 1px solid #fde2e4;
+    }
+    &.about {
+      border-top: 1px solid #fad2e1;
+      border-bottom: 10px solid #fad2e1;
+      border-left: 1px solid #fad2e1;
+      border-right: 1px solid #fad2e1;
+    }
+    &.about-me {
+      border-top: 1px solid #e2ece9;
+      border-bottom: 10px solid #e2ece9;
+      border-left: 1px solid #e2ece9;
+      border-right: 1px solid #e2ece9;
+    }
+    &.now {
+      border-top: 1px solid #f0efeb;
+      border-bottom: 10px solid #f0efeb;
+      border-left: 1px solid #f0efeb;
+      border-right: 1px solid #f0efeb;
+    }
+    &.links {
+      border-top: 1px solid #dfe7fd;
+      border-bottom: 10px solid #dfe7fd;
+      border-left: 1px solid #dfe7fd;
+      border-right: 1px solid #dfe7fd;
+    }
+    &.contact {
+      border-top: 1px solid #cddafd;
+      border-bottom: 10px solid #cddafd;
+      border-left: 1px solid #cddafd;
+      border-right: 1px solid #cddafd;
+    }
+    .last-updated {
+      font-variant: small-caps;
+      text-align: center;
+      padding: 1rem;
+      margin: 2rem 0;
+      background-color: #eae4e9;
+    }
+  }
+  h1,
+  h2,
+  h3 {
+    font-style: italic;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+  }
+
+  ul li {
+    line-height: 1.3;
+    margin: 0.3rem 0;
+  }
+}
+
+footer {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  font-style: italic;
+  color: $black;
+}
+
+.email {
+  text-align: center;
+}
+
+.moonphase {
+  width: 30px;
+  min-width: fit-content;
+  font-size: 30px;
+  margin: 2rem auto;
+}
+
+.joined {
+  text-align: center;
+  margin: 2rem 0;
+  p {
+    margin: 1.5rem 0;
+    &.sprites {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+mark {
+  background-color: $lightyellow;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+dl {
+  padding: 1rem;
+  background-color: #e2ece990;
+  dt {
+    font-weight: 800;
+  }
+
+  dd + dt {
+    margin-top: 1rem;
+  }
+}
+
+#statuscafe {
+  padding: 1rem;
+  background-color: #f0efeb90;
+}
+#statuscafe-username {
+  margin-bottom: 0.5rem;
+}
+#statuscafe-content {
+  margin: 0 1rem 0.5rem 1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+// Safont webring
+:root {
+  --g1v5x3-background-color: transparent !important;
+  --g1v5x3-width: 100% !important;
+  --g1v5x3-padding: 0 !important;
+  --g1v5x3-title-font: "EB Garamond", serif !important;
+  --g1v5x3-title-color: #222 !important;
+  --g1v5x3-title-size: 1.225rem !important;
+  --g1v5x3-title-weight: normal !important;
+  --g1v5x3-text-family: "EB Garamond", serif !important;
+  --g1v5x3-text-size: 1.225rem !important;
+  --g1v5x3-link-family: "EB Garamond", serif !important;
+  --g1v5x3-link-color: #da4167 !important;
+  --g1v5x3-link-decoration: underline !important;
+  --g1v5x3-link-size: 1.225rem !important;
+}
