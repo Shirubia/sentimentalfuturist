@@ -35,16 +35,6 @@
             it as some sort of digital garden I like to tend to, where small
             things will eventually grow.
           </p>
-          <div>Number of visitors: <div id="stats"></div></div>
-
-<script>
-    var r = new XMLHttpRequest();
-    r.addEventListener('load', function() {
-        document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
-    })
-    r.open('GET', 'https://sentimentalfuturist.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
-    r.send()
-</script>
           <div class="joined">
             <p>
               <script src="https://xandra.cc/safonts/webring.js" defer></script>
@@ -157,7 +147,7 @@
           </p>
           <p>
             This main page is coded by hand in vscode and is plain HTML,
-            Sass/CSS and a bit of Javascript. It's intended to be
+            SCSS and a bit of JavaScript. It's intended to be
             mobile/ipad/high-resolution/whatever-friendly.
           </p>
           <p>
@@ -232,12 +222,11 @@
               >)
             </li>
             <li>
-              <strong>reading:</strong> fanfiction
-              <!-- <a
+              <strong>reading:</strong>               <a
                 href="https://app.thestorygraph.com/currently-reading/shirubia"
                 rel="external"
                 >something, probably</a
-              > -->
+              >
             </li>
             <li><strong>playing:</strong> Animal Crossing New Horizons, WoW</li>
             <li>
@@ -433,7 +422,7 @@
           class="image-link"
         >
           <img
-            style="height: 128px"
+            style="height: 100px"
             src="https://nonbot.org/images/nonbot_pledged_logo.svg"
             alt="Human-made Content"
           />
