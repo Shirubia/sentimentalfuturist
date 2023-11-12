@@ -46,6 +46,7 @@ function displayRandomTagline() {
     "i support women's rights, but also women's wrongs",
     "come for the content, stay for the self-deprecating humor",
     "beam me up, 'cause i can't breathe 🛸🎶",
+    "\"getting old isn't a curse, it's an achievement\" &mdash;a philosopher"
   ];
 
   var randomIndex = Math.floor(Math.random() * taglines.length);
