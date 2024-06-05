@@ -46,7 +46,7 @@ function displayRandomTagline() {
     "i support women's rights, but also women's wrongs",
     "come for the content, stay for the self-deprecating humor",
     "beam me up, 'cause i can't breathe 🛸🎶",
-    "\"getting old isn't a curse, it's an achievement\" &mdash;a philosopher"
+    "\"getting old isn't a curse, it's an achievement\" &mdash;a philosopher",
   ];
 
   var randomIndex = Math.floor(Math.random() * taglines.length);
@@ -118,6 +118,21 @@ function updateLastModifiedDate() {
 
 updateLastModifiedDate();
 
-// displaycurrent year
+// display current year
 const yearElement = document.getElementById("year");
 yearElement.textContent = " in " + new Date().getFullYear();
+
+// cookie notice
+document.addEventListener("DOMContentLoaded", function () {
+  const cookieNotice = document.getElementById("cookie-notice");
+  const closeNoticeButton = document.getElementById("close-cookie-notice");
+
+  if (!localStorage.getItem("cookieNoticeClosed")) {
+    cookieNotice.style.display = "flex";
+  }
+
+  closeNoticeButton.addEventListener("click", function () {
+    cookieNotice.style.display = "none";
+    localStorage.setItem("cookieNoticeClosed", "true");
+  });
+});

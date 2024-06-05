@@ -244,4 +244,40 @@ dl dd + dt {
   --g1v5x3-link-color: #da4167 !important;
   --g1v5x3-link-decoration: underline !important;
   --g1v5x3-link-size: 1.225rem !important;
+}
+
+#cookie-notice {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-width: 250px;
+  max-width: 600px;
+  background-color: #fff;
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem;
+  display: none;
+  flex-direction: column;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border: 1px solid #fad2e1;
+  z-index: 1000;
+}
+#cookie-notice p {
+  margin: 0;
+  flex-grow: 1;
+}
+#cookie-notice button {
+  font-family: "EB Garamond", serif;
+  font-size: 1rem;
+  background-color: #da4167;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  margin: 1.5rem 0 1rem 0;
+  cursor: pointer;
+}
+#cookie-notice button:hover {
+  background-color: #fff;
+  color: #da4167;
+  outline: 1px solid #da4167;
 }/*# sourceMappingURL=style.css.map */
