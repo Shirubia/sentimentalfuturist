@@ -153,6 +153,10 @@ main.grid {
       padding: 1rem;
       margin: 2rem 0;
       background-color: #eae4e9;
+      .changelog {
+        font-variant: none;
+        font-size: small;
+      }
     }
   }
   h1,
