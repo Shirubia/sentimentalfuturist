@@ -2,7 +2,7 @@
 $lightyellow: #faf3dd;
 $white: #fff;
 $black: #222;
-$cerise: #da4167;
+$cerise: #cf3d61;
 
 $fontcolor: $black;
 $linkcolor: $cerise;
@@ -152,7 +152,7 @@ main.grid {
       text-align: center;
       padding: 1rem;
       margin: 2rem 0;
-      background-color: #eae4e9;
+      border: 1px solid #eae4e9;
       .changelog {
         font-variant: none;
         font-size: small;
@@ -224,7 +224,7 @@ ul {
 
 dl {
   padding: 1rem;
-  background-color: #e2ece990;
+  border: 1px solid #e2ece9;
   dt {
     font-weight: 800;
   }
@@ -236,13 +236,13 @@ dl {
 
 #statuscafe {
   padding: 1rem;
-  background-color: #f0efeb90;
-}
-#statuscafe-username {
-  margin-bottom: 0.5rem;
-}
-#statuscafe-content {
-  margin: 0 1rem 0.5rem 1rem;
+  border: 1px solid #f0efeb;
+  &-username {
+    margin-bottom: 0.5rem;
+  }
+  &-content {
+    margin: 0 1rem 0.5rem 1rem;
+  }
 }
 
 .center {
@@ -261,7 +261,7 @@ dl {
   --g1v5x3-text-family: "EB Garamond", serif !important;
   --g1v5x3-text-size: 1.225rem !important;
   --g1v5x3-link-family: "EB Garamond", serif !important;
-  --g1v5x3-link-color: #da4167 !important;
+  --g1v5x3-link-color: #cf3d61 !important;
   --g1v5x3-link-decoration: underline !important;
   --g1v5x3-link-size: 1.225rem !important;
 }
@@ -292,7 +292,7 @@ dl {
   button {
     font-family: "EB Garamond", serif;
     font-size: 1rem;
-    background-color: #da4167;
+    background-color: $cerise;
     color: #fff;
     border: none;
     padding: 1rem;
@@ -300,8 +300,8 @@ dl {
     cursor: pointer;
     &:hover {
       background-color: #fff;
-      color: #da4167;
-      outline: 1px solid #da4167;
+      color: $cerise;
+      outline: 1px solid $cerise;
     }
   }
 }
