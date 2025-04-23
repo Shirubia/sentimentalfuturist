@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Calítoe",
+    "url": "https://www.diletante.net/",
+    "img": "/assets/img/links/calitoe.jpg"
+  },
+  {
+    "name": "foreverliketh.is",
+    "url": "https://foreverliketh.is",
+    "img": "/assets/img/links/foreverliketh.is.png"
+  },
+  {
+    "name": "Florrie",
+    "url": "https://florrie.ichi.city",
+    "img": "/assets/img/links/florrie.gif"
+  },
+  {
+    "name": "Frills",
+    "url": "https://frills.dev",
+    "img": "/assets/img/links/frills.png"
+  },
+  {
+    "name": "Alexandra",
+    "url": "https://xandra.cc/",
+    "img": "/assets/img/links/alexandra.png"
+  },
+  {
+    "name": "Bluelander",
+    "url": "https://bluelander.neocities.org",
+    "img": "/assets/img/links/bluelander.gif"
+  },
+  {
+    "name": "Mei",
+    "url": "https://www.hellomei.dev",
+    "img": "/assets/img/links/hellomei.gif"
+  },
+  {
+    "name": "Dimden",
+    "url": "https://dimden.dev/",
+    "img": "https://dimden.dev/services/images/88x31.gif"
+  },
+  {
+    "name": "Kale",
+    "url": "https://kalechips.net",
+    "img": "/assets/img/links/kalechips.png"
+  },
+  {
+    "name": "Maya",
+    "url": "https://maya.land/",
+    "img": "/assets/img/links/maya.png"
+  },
+  {
+    "name": "Maria",
+    "url": "https://maria.town/",
+    "img": "/assets/img/links/maria.png"
+  },
+  {
+    "name": "Xanthe",
+    "url": "https://satyrs.eu",
+    "img": "/assets/img/links/satyrs.png"
+  },
+  {
+    "name": "Lost",
+    "url": "https://lostletters.neocities.org",
+    "img": "/assets/img/links/lostletters.gif"
+  },
+  {
+    "name": "Starbreaker",
+    "url": "https://starbreaker.org/",
+    "img": "/assets/img/links/starbreaker.avif"
+  },
+  {
+    "name": "Daryl Sun",
+    "url": "https://blog.darylsun.page/",
+    "img": "/assets/img/links/darylsun.webp"
+  },
+  {
+    "name": "Lysianthus",
+    "url": "https://lysianth.us/",
+    "textOnly": true
+  },
+  {
+    "name": "Localghost",
+    "url": "https://localghost.dev",
+    "textOnly": true
+  },
+  {
+    "name": "Oat",
+    "url": "https://oat.meowandsparkle.party/",
+    "textOnly": true
+  },
+  {
+    "name": "Benko",
+    "url": "https://www.ladybenko.net/",
+    "textOnly": true
+  },
+  {
+    "name": "Aroceu",
+    "url": "https://kingdra.net",
+    "img": "/assets/img/links/kingdra.png"
+  },
+  {
+    "name": "Fritzi",
+    "url": "https://bohemiansultriness.nekoweb.org/",
+    "img": "/assets/img/links/bohemiansultriness.gif"
+  }
+]

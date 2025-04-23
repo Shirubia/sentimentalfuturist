@@ -1,0 +1,36 @@
+header {
+  background-color: rgba(var(--color-highlight-low-rgb), 0.85);
+  padding: 0 0 0 10px;
+  margin: 0;
+  border-block-start: 1px solid var(--color-rose);
+  border-inline-start: 1px solid var(--color-rose);
+  border-inline-end: 1px solid var(--color-rose);
+  position: relative;
+  max-height: 1.5rem;
+
+  h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(to right, var(--color-text), var(--color-love));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 2px 0;
+    margin: 0;
+
+    &:after {
+      content: "‒ □ ✕";
+      display: inline-block;
+      margin-inline-start: 5px;
+      color: var(--color-rose);
+      vertical-align: top;
+      position: absolute;
+      right: 10px;
+    }
+    @media only screen and (max-width: 330px) {
+      &:after {
+        content: "";
+      }
+    }
+  }
+}

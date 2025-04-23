@@ -1,0 +1,46 @@
+table {
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;
+  max-width: 600px;
+
+  td,
+  th {
+    text-align: right;
+    vertical-align: middle;
+    padding: 1em;
+  }
+  td + td,
+  th + td {
+    text-align: left;
+  }
+}
+
+
+table caption {
+  text-align: left;
+}
+
+thead {
+  border-bottom: 1px solid var(--color-highlight-high);
+}
+
+tfoot {
+  border-top: 1px solid var(--color-highlight-high);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-highlight-low);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-highlight-med);
+}
+
+// tbody tr:nth-child(even) button {
+//   background-color: var(--background-alt);
+// }
+
+// tbody tr:nth-child(even) button:hover {
+//   background-color: var(--background-body);
+// }

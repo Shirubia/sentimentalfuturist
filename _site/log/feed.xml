@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>sentimentalfuturist.net · changelog</title>
+        <link>https://sentimentalfuturist.net/log/</link>
+        <description>Updates and changes made to the site</description>
+        <language>en</language>
+        <lastBuildDate>Wed, 23 Apr 2025 00:00:00 +0200</lastBuildDate>
+        
+            <item>
+                <title>23/04/2025</title>
+                <link>https://sentimentalfuturist.net/log/#20250423</link>
+                <guid>https://sentimentalfuturist.net/log/#20250423</guid>
+                <pubDate>Wed, 23 Apr 2025 00:00:00 +0200</pubDate>
+                <description>
+                    <![CDATA[<ul><li>Finally added a real changelog (this one!)</li><li>General redesign and restructuring of the site and migration to Eleventy</li></ul>]]>
+                </description>
+            </item>
+        
+    </channel>
+</rss>

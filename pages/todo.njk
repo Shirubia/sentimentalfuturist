@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+title: To-do list
+permalink: /todo/
+breadcrumb: '<a href="/">Home</a> &#187; <a href="/todo">To-do list</a>'
+date: Last Modified
+createdDate: 2025-04-21
+---
+
+<h2>To-do list</h2>
+<p>An incomplete list with ideas / pending tasks / things I want to add or update in the site.</p>
+<ul>
+    <li class="completed">Migrate site to Eleventy</li>
+    <li class="completed">Add a real changelog that's not just a link to the GitHub commits list</li>
+    <li>Add a guestbook that works 🥲</li>
+    <li>Improve the
+        <a href="/contact">contact</a>
+        page</li>
+    <li>Refactor the
+        <a href="/art">art</a>
+        page without JavaScript and with improved accessibility
+    </li>
+    <li>Might as well refactor the
+        <a href="/memes">meme collection</a>
+        page and the
+        <a href="https://fan.sentimentalfuturist.net/">joined fanlistings</a>
+        page, while I'm at it</li>
+    <li>Add a /reading page with books I'm currently reading (scraping data from The StoryGraph?? or is there an API?)</li>
+    <li>Add a /games page listing the games I'm playing lately</li>
+    <li>Add a /uses page (see
+        <a href="https://uses.tech/">uses.tech</a>)</li>
+    <li>Add a /skincare page to keep track of how I take care of my rosacea and etc.</li>
+    <li>Add cookie notice (again)</li>
+    <li>Create a new button to
+        <a href="/links">link</a>
+        to the site</li>
+</ul>
+<div class="metadata">
+    <p>
+        Page created:
+        <time datetime="{{ createdDate | readableCreatedDate }}" title="{{ createdDate | readableCreatedDate }} (DD/MM/YYYY)">{{ createdDate|readableCreatedDate }}</time>, last updated:
+        <time datetime="{{ page.date | date('yyyy-LL-dd') }}" title="{{ page.date | readableDate }} (DD/MM/YYYY)">
+            {{ page.date | readableDate }}
+        </time>
+    </p>
+</div>

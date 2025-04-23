@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /log/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>sentimentalfuturist.net · changelog</title>
+        <link>{{ site.url }}/log/</link>
+        <description>Updates and changes made to the site</description>
+        <language>en</language>
+        <lastBuildDate>{{ changelog[0].date.toRFC2822() }}</lastBuildDate>
+        {% for update in changelog %}
+            <item>
+                <title>{{ update.date.toFormat("dd/LL/yyyy") }}</title>
+                <link>{{ site.url }}/log/#{{ update.date.toFormat("yyyyLLdd") }}</link>
+                <guid>{{ site.url }}/log/#{{ update.date.toFormat("yyyyLLdd") }}</guid>
+                <pubDate>{{ update.date.toRFC2822() }}</pubDate>
+                <description>
+                    <![CDATA[{{ update.text | safe }}]]>
+                </description>
+            </item>
+        {% endfor %}
+    </channel>
+</rss>

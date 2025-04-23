@@ -1,0 +1,525 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  animation: enter 1s forwards;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--color-text);
+  hyphens: auto;
+  background-color: var(--color-base);
+  background: url("../img/dithered-image.png") no-repeat center center fixed;
+  background-size: cover;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  background-color: rgba(var(--color-base-rgb), 0.85);
+  padding: 1rem;
+  border: 1px solid var(--color-rose);
+}
+
+h1 {
+  margin-block: 4rem 2rem;
+}
+
+h2 {
+  margin-block: 3rem 1.5rem;
+}
+
+h3 {
+  margin-block: 2rem 1rem;
+}
+
+h4,
+h5,
+h6 {
+  margin-block: 1.5rem 0.5rem;
+}
+
+blockquote,
+q {
+  border-left: 4px solid var(--color-rose);
+  margin: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-style: italic;
+}
+
+blockquote > footer {
+  font-style: normal;
+  border: 0;
+}
+
+blockquote cite {
+  font-style: normal;
+}
+
+mark {
+  background-color: rgba(var(--color-gold-rgb), 0.3);
+  border-radius: 2px;
+  padding: 0 2px 0 2px;
+}
+
+em,
+strong {
+  color: var(--color-pine);
+}
+
+dl {
+  border: 1px dotted var(--color-love);
+  padding: 1rem;
+}
+dl dt {
+  font-weight: bold;
+  color: var(--color-love);
+}
+dl dd + dt {
+  margin-block-start: 1rem;
+}
+
+a > code,
+a > strong {
+  color: inherit;
+}
+
+code,
+samp,
+time {
+  color: var(--color-text);
+  font-size: 1em;
+}
+
+code,
+samp {
+  background: linear-gradient(to right, rgba(var(--color-rose-rgb), 0.2), rgba(var(--color-foam-rgb), 0.2));
+  border-radius: 2px;
+  padding: 0 2px 0 2px;
+}
+
+pre > code {
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+}
+
+var {
+  color: var(--color-rose);
+  font-style: normal;
+  font-family: monospace;
+}
+
+kbd {
+  background: var(--color-highlight-low);
+  border: 1px solid var(--color-iris);
+  border-radius: 2px;
+  color: var(--color-text);
+  padding: 2px 4px 2px 4px;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;
+  max-width: 600px;
+}
+table td,
+table th {
+  text-align: right;
+  vertical-align: middle;
+  padding: 1em;
+}
+table td + td,
+table th + td {
+  text-align: left;
+}
+
+table caption {
+  text-align: left;
+}
+
+thead {
+  border-bottom: 1px solid var(--color-highlight-high);
+}
+
+tfoot {
+  border-top: 1px solid var(--color-highlight-high);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-highlight-low);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-highlight-med);
+}
+
+a {
+  text-decoration: none;
+  background: linear-gradient(to right, var(--color-love), var(--color-iris));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-bottom: 1px dotted var(--color-love);
+}
+a:hover {
+  color: var(--color-foam);
+  border-bottom: 1px dotted var(--color-foam);
+  transition: all 0.5s ease-in-out;
+}
+a:has(img) {
+  border-bottom: none;
+}
+a:has(img):hover {
+  border-bottom: none;
+}
+
+a[href^="http://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
+a[href^="https://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
+a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after {
+  content: "↗";
+}
+
+.text-link {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 88px;
+  height: 31px;
+  line-height: 31px;
+  text-align: center;
+  border: 1px solid var(--color-text);
+  font-size: 0.8rem;
+  font-variant: all-petite-caps;
+  color: var(--color-love);
+  background: var(--color-highlight-low);
+}
+.text-link:hover {
+  color: var(--color-foam);
+  border: 1px solid var(--color-foam);
+  transition: all 0.5s ease-in-out;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+header {
+  background-color: rgba(var(--color-highlight-low-rgb), 0.85);
+  padding: 0 0 0 10px;
+  margin: 0;
+  border-block-start: 1px solid var(--color-rose);
+  border-inline-start: 1px solid var(--color-rose);
+  border-inline-end: 1px solid var(--color-rose);
+  position: relative;
+  max-height: 1.5rem;
+}
+header h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, var(--color-text), var(--color-love));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 2px 0;
+  margin: 0;
+}
+header h1:after {
+  content: "‒ □ ✕";
+  display: inline-block;
+  margin-inline-start: 5px;
+  color: var(--color-rose);
+  vertical-align: top;
+  position: absolute;
+  right: 10px;
+}
+@media only screen and (max-width: 330px) {
+  header h1:after {
+    content: "";
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(var(--color-highlight-low-rgb), 0.85);
+  padding: 0;
+  margin: 1rem 0 0 0;
+  border-block-start: 1px solid var(--color-rose);
+  border-block-end: 1px solid var(--color-rose);
+  border-inline-start: 1px solid var(--color-rose);
+  border-inline-end: 1px solid var(--color-rose);
+  position: relative;
+}
+footer:after {
+  content: "‒ □ ✕";
+  display: inline-block;
+  margin-inline-start: 5px;
+  color: var(--color-rose);
+  vertical-align: top;
+  position: absolute;
+  right: 10px;
+}
+footer nav ul.footer-links {
+  list-style: none;
+  padding: 1rem;
+  margin: 1.5rem 0 0 0;
+  border-block-start: 1px solid var(--color-rose);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 1.2rem;
+  font-size: 0.9rem;
+}
+footer nav ul.footer-links li {
+  display: inline;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed var(--color-love);
+}
+
+details {
+  background-color: var(--color-highlight-med);
+  padding: 10px 10px 0;
+  margin: 1em 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+details > :not(summary) {
+  margin-top: 0;
+}
+
+details[open] {
+  padding: 10px;
+}
+
+details > :last-child {
+  margin-bottom: 0;
+}
+
+details[open] summary {
+  margin-bottom: 10px;
+}
+
+summary {
+  display: list-item;
+  background-color: var(--color-highlight-low);
+  padding: 10px;
+  margin: -10px -10px 0;
+  cursor: pointer;
+  outline: none;
+}
+summary::marker, summary::-webkit-details-marker {
+  color: var(--color-text);
+}
+summary:hover, summary:focus {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+ul.two-column {
+  column-count: 2;
+  gap: 2rem;
+}
+ul.two-column li {
+  break-inside: avoid-column;
+}
+
+@media only screen and (max-width: 600px) {
+  ul.two-column {
+    column-count: 1;
+  }
+}
+li {
+  list-style-type: none;
+}
+li::marker {
+  content: "☐ ";
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+li.completed {
+  color: var(--color-muted);
+  text-decoration: line-through;
+}
+li.completed::marker {
+  content: "☑ ";
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+::selection {
+  background-color: var(--color-iris);
+  color: var(--color-highlight-low);
+}
+
+.last-updated {
+  font-variant: all-petite-caps;
+  font-weight: 600;
+  max-width: fit-content;
+  display: flex;
+  align-items: end;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, rgba(var(--color-rose-rgb), 0.1), rgba(var(--color-foam-rgb), 0.1));
+}
+.last-updated .changelog::before {
+  content: "❀";
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  color: var(--color-love);
+}
+@media only screen and (max-width: 400px) {
+  .last-updated .changelog::before {
+    content: "";
+  }
+}
+
+.joined {
+  text-align: center;
+  margin: 2rem 0;
+}
+.joined p {
+  margin: 1.5rem 0;
+}
+.joined p.sprites {
+  margin-top: 1.5rem;
+}
+
+svg.rss {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-top;
+  text-decoration: none;
+  fill: var(--color-iris);
+}
+svg.rss:hover {
+  fill: var(--color-foam);
+  transition: all 0.5s ease-in-out;
+}
+
+nav.breadcrumbs {
+  color: var(--color-subtle);
+  margin-block-end: 2rem;
+}
+
+.metadata {
+  margin-block-start: 3rem;
+  color: var(--color-subtle);
+}
+
+.email {
+  text-align: center;
+}
+
+:root {
+  --g1v5x3-background-color: transparent !important;
+  --g1v5x3-width: 100% !important;
+  --g1v5x3-padding: 0 !important;
+  --g1v5x3-title-font: "IBM Plex Mono", monospace !important;
+  --g1v5x3-title-color: var(--color-text) !important;
+  --g1v5x3-title-size: 1rem !important;
+  --g1v5x3-title-weight: normal !important;
+  --g1v5x3-text-family: "IBM Plex Mono", monospace !important;
+  --g1v5x3-text-size: 1rem !important;
+  --g1v5x3-link-family: "IBM Plex Mono", monospace !important;
+  --g1v5x3-link-color: var(--color-love) !important;
+  --g1v5x3-link-decoration: underline !important;
+  --g1v5x3-link-size: 1rem !important;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+[data-theme=light] {
+  --color-base: rgb(250, 244, 237);
+  --color-base-rgb: 250, 244, 237;
+  --color-surface: rgb(255, 250, 243);
+  --color-surface-rgb: 255, 250, 243;
+  --color-overlay: rgb(242, 233, 222);
+  --color-overlay-rgb: 242, 233, 222;
+  --color-muted: rgb(152, 147, 165);
+  --color-muted-rgb: 152, 147, 165;
+  --color-subtle: rgb(137, 129, 153);
+  --color-subtle-rgb: 137, 129, 153;
+  --color-text: rgb(87, 82, 121);
+  --color-text-rgb: 87, 82, 121;
+  --color-love: rgb(180, 99, 122);
+  --color-love-rgb: 180, 99, 122;
+  --color-gold: rgb(234, 157, 52);
+  --color-gold-rgb: 234, 157, 52;
+  --color-rose: rgb(210, 132, 126);
+  --color-rose-rgb: 210, 132, 126;
+  --color-pine: rgb(40, 105, 131);
+  --color-pine-rgb: 40, 105, 131;
+  --color-foam: rgb(86, 148, 159);
+  --color-foam-rgb: 86, 148, 159;
+  --color-iris: rgb(144, 122, 169);
+  --color-iris-rgb: 144, 122, 169;
+  --color-highlight-low: rgb(244, 237, 232);
+  --color-highlight-low-rgb: 244, 237, 232;
+  --color-highlight-med: rgb(239, 231, 226);
+  --color-highlight-med-rgb: 239, 231, 226;
+  --color-highlight-high: rgb(229, 221, 216);
+  --color-highlight-high-rgb: 229, 221, 216;
+}
+
+[data-theme=dark] {
+  --color-base: rgb(25, 23, 36);
+  --color-base-rgb: 25, 23, 36;
+  --color-surface: rgb(31, 29, 46);
+  --color-surface-rgb: 31, 29, 46;
+  --color-overlay: rgb(38, 35, 58);
+  --color-overlay-rgb: 38, 35, 58;
+  --color-muted: rgb(144, 140, 170);
+  --color-muted-rgb: 144, 140, 170;
+  --color-subtle: rgb(110, 106, 134);
+  --color-subtle-rgb: 110, 106, 134;
+  --color-text: rgb(224, 222, 244);
+  --color-text-rgb: 224, 222, 244;
+  --color-love: rgb(235, 111, 146);
+  --color-love-rgb: 235, 111, 146;
+  --color-gold: rgb(246, 193, 119);
+  --color-gold-rgb: 246, 193, 119;
+  --color-rose: rgb(235, 188, 186);
+  --color-rose-rgb: 235, 188, 186;
+  --color-pine: rgb(49, 116, 143);
+  --color-pine-rgb: 49, 116, 143;
+  --color-foam: rgb(86, 148, 159);
+  --color-foam-rgb: 86, 148, 159;
+  --color-iris: rgb(196, 167, 231);
+  --color-iris-rgb: 196, 167, 231;
+  --color-highlight-low: rgb(35, 32, 52);
+  --color-highlight-low-rgb: 35, 32, 52;
+  --color-highlight-med: rgb(54, 50, 72);
+  --color-highlight-med-rgb: 54, 50, 72;
+  --color-highlight-high: rgb(72, 68, 104);
+  --color-highlight-high-rgb: 72, 68, 104;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: Changelog
+date: Last Modified
+permalink: /log/
+createdDate: 2025-04-21
+breadcrumb: '<a href="/">Home</a> &#187; <a href="/log">Changelog</a>'
+---
+
+<h2>Changelog</h2>
+<p>You can subscribe to the changelog's
+    <a href="feed.xml" class="rss">RSS feed
+        <svg class="rss" viewBox="0 0 800 800">
+            <path d="M493 652H392c0-134-111-244-244-244V307c189 0 345 156 345 345zm71 0c0-228-188-416-416-416V132c285 0 520 235 520 520z"></path>
+            <circle cx="219" cy="581" r="71"></circle>
+        </svg>
+    </a></p>
+{% for update in changelog %}
+    <article>
+        <h3>
+            <time datetime="{{ update.date }}" title="{{ update.date | formatDate }} (DD/MM/YYYY)">
+                {{ update.date | formatDate }}
+            </time>
+        </h3>
+        {{ update.text | safe }}
+    </article>
+{% endfor %}

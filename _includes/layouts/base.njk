@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{{ "sentimental futurist · " + title }}</title>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22
+                font-size=%2290%22>🌌</text></svg>"/>
+        <link rel="stylesheet" href="/assets/css/style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>sentimentalfuturist.net</h1>
+        </header>
+        <main>
+            {% if breadcrumb %}
+                <nav class="breadcrumbs">
+                    {{ breadcrumb | safe }}
+                </nav>
+            {% endif %}
+            {{ content | safe }}
+        </main>
+        <footer>
+            <nav aria-label="Footer navigation">
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://sentimentalfuturist.net">sentimentalfuturist.net</a>:                         perpetrated in the future
+                        <span id="year"></span>
+                    </li>
+                    <li>
+                        <a href="/colophon">Colophon</a>
+                    </li>
+                    <li>
+                        <a href="#">Back to top ⬆</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+        <script src="/assets/js/scripts.js" defer></script>
+        <script data-goatcounter="https://sentimentalfuturist.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    </body>
+</html>

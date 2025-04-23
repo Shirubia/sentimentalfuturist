@@ -1,0 +1,57 @@
+a {
+  text-decoration: none;
+  background: linear-gradient(to right, var(--color-love), var(--color-iris));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-bottom: 1px dotted var(--color-love);
+
+  &:hover {
+    color: var(--color-foam);
+    border-bottom: 1px dotted var(--color-foam);
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:has(img) {
+    border-bottom: none;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+a[href^="http://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
+a[href^="https://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
+a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after
+{
+  content: "↗";
+}
+
+.text-link {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 88px;
+  height: 31px;
+  line-height: 31px;
+  text-align: center;
+  border: 1px solid var(--color-text);
+  font-size: 0.8rem;
+  font-variant: all-petite-caps;
+  color: var(--color-love);
+  background: var(--color-highlight-low);
+
+  &:hover {
+    color: var(--color-foam);
+    border: 1px solid var(--color-foam);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}

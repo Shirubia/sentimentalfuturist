@@ -1,0 +1,179 @@
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed var(--color-love);
+}
+
+details {
+  background-color: var(--color-highlight-med);
+  padding: 10px 10px 0;
+  margin: 1em 0;
+  border-radius: 6px;
+  overflow: hidden;
+
+  > :not(summary) {
+    margin-top: 0;
+  }
+}
+
+details[open] {
+  padding: 10px;
+}
+
+details > :last-child {
+  margin-bottom: 0;
+}
+
+details[open] summary {
+  margin-bottom: 10px;
+}
+
+summary {
+  display: list-item;
+  background-color: var(--color-highlight-low);
+  padding: 10px;
+  margin: -10px -10px 0;
+  cursor: pointer;
+  outline: none;
+
+  &::marker,
+  &::-webkit-details-marker {
+    color: var(--color-text);
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+}
+
+ul.two-column {
+  column-count: 2;
+  gap: 2rem;
+
+  li {
+    break-inside: avoid-column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  ul.two-column {
+    column-count: 1;
+  }
+}
+
+li {
+  list-style-type: none;
+
+  &::marker {
+    content: "☐ ";
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  &.completed {
+    color: var(--color-muted);
+    text-decoration: line-through;
+
+    &::marker {
+      content: "☑ ";
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+::selection {
+  background-color: var(--color-iris);
+  color: var(--color-highlight-low);
+}
+
+.last-updated {
+  font-variant: all-petite-caps;
+  font-weight: 600;
+  max-width: fit-content;
+  display: flex;
+  align-items: end;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(
+    to right,
+    rgba(var(--color-rose-rgb), 0.1),
+    rgba(var(--color-foam-rgb), 0.1)
+  );
+
+  .changelog {
+    &::before {
+      content: "❀";
+      margin: 0 1rem;
+      font-size: 1.2rem;
+      color: var(--color-love);
+    }
+    @media only screen and (max-width: 400px) {
+      &::before {
+        content: "";
+      }
+    }
+  }
+}
+
+.joined {
+  text-align: center;
+  margin: 2rem 0;
+  p {
+    margin: 1.5rem 0;
+    &.sprites {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+svg.rss {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-top;
+  text-decoration: none;
+  fill: var(--color-iris);
+
+  &:hover {
+    fill: var(--color-foam);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+nav.breadcrumbs {
+  color: var(--color-subtle);
+  margin-block-end: 2rem;
+}
+
+.metadata {
+  margin-block-start: 3rem;
+  color: var(--color-subtle);
+}
+
+.email {
+  text-align: center;
+}
+
+// Safont webring
+:root {
+  --g1v5x3-background-color: transparent !important;
+  --g1v5x3-width: 100% !important;
+  --g1v5x3-padding: 0 !important;
+  --g1v5x3-title-font: "IBM Plex Mono", monospace !important;
+  --g1v5x3-title-color: var(--color-text) !important;
+  --g1v5x3-title-size: 1rem !important;
+  --g1v5x3-title-weight: normal !important;
+  --g1v5x3-text-family: "IBM Plex Mono", monospace !important;
+  --g1v5x3-text-size: 1rem !important;
+  --g1v5x3-link-family: "IBM Plex Mono", monospace !important;
+  --g1v5x3-link-color: var(--color-love) !important;
+  --g1v5x3-link-decoration: underline !important;
+  --g1v5x3-link-size: 1rem !important;
+}

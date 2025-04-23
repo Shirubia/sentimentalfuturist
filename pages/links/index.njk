@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Links
+date: Last Modified
+permalink: /links/
+createdDate: 2023-10-10
+breadcrumb: '<a href="/">Home</a> &#187; <a href="/links">Links</a>'
+---
+
+<h2>Links</h2>
+<p>Awesome and inspirational websites I like to visit! Order is random & shuffled from time to time 👀</p>
+<div class="link-grid">
+    {% for link in links | shuffle %}
+        {% if link.textOnly %}
+            <a href="{{ link.url }}" class="text-link" title="{{ link.name }}" rel="external">
+                {{ link.name }}
+            </a>
+        {% else %}
+            <a href="{{ link.url }}" class="image-link" rel="external">
+                <img src="{{ link.img }}" alt="{{ link.name }}" title="{{ link.name }}" width="88" height="31"/>
+            </a>
+        {% endif %}
+    {% endfor %}
+</div>
+<h3>Link me?</h3>
+<p>
+    You can link me with a plain text link or with one of these buttons:
+</p>
+<p>
+    <img src="img/linkme/100x50_senti.png" alt="100x50 button" title="100x50 button"/>
+    <img src="img/linkme/100x35_senti.png" alt="100x35 button" title="100x35 button"/>
+    <img src="img/linkme/88x31_senti.png" alt="88x31 button" title="88x31 button"/>
+</p>
+<div class="metadata">
+    <p>
+        Page created:
+        <time datetime="{{ createdDate | readableCreatedDate }}" title="{{ createdDate | readableCreatedDate }} (DD/MM/YYYY)">{{ createdDate|readableCreatedDate }}</time>, last updated:
+        <time datetime="{{ page.date | date('yyyy-LL-dd') }}" title="{{ page.date | readableDate }} (DD/MM/YYYY)">
+            {{ page.date | readableDate }}
+        </time>
+    </p>
+</div>
