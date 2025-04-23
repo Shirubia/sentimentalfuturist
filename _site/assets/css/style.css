@@ -371,6 +371,10 @@ li.completed::marker {
   color: var(--color-highlight-low);
 }
 
+#tagline {
+  margin-block-end: 2rem;
+}
+
 .last-updated {
   font-variant: all-petite-caps;
   font-weight: 600;
