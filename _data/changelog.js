@@ -8,7 +8,7 @@ module.exports = () => {
     },
     {
       date: DateTime.fromISO("2025-04-24"),
-      text: '<p>Added a new link in the <a href="/links">links</a> page, and also a new button to link to this site.</p>',
+      text: '<ul><li>There are new links in the <a href="/links">links</a> page, and also a new button to link to this site</li><li>Added cache busting</li></ul>',
     },
   ].sort((a, b) => b.date - a.date);
 };

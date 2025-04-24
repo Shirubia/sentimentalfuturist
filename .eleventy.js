@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets/img");
   eleventyConfig.addPassthroughCopy("assets/js");
   eleventyConfig.addPassthroughCopy({ "pages/links/img": "assets/img" });
+  eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy(".htaccess");
 
   eleventyConfig.addPlugin(pluginRss);

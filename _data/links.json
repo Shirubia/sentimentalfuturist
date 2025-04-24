@@ -108,5 +108,20 @@
     "name": "Ten",
     "url": "https://karma.computer/",
     "img": "/assets/img/links/ten.webp"
+  },
+  {
+    "name": "Petra",
+    "url": "https://petrapixel.neocities.org/",
+    "img": "https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif"
+  },
+  {
+    "name": "Solita",
+    "url": "https://solita.neocities.org/",
+    "img": "/assets/img/links/solita.png"
+  },
+  {
+    "name": "Bechno Kid",
+    "url": "https://bechnokid.neocities.org/",
+    "img": "https://raw.githubusercontent.com/bechnokid/neocities/refs/heads/master/public/assets/images/button.png"
   }
 ]
