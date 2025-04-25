@@ -98,6 +98,30 @@ li {
   margin-block-end: 2rem;
 }
 
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media only screen and (max-width: 400px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &:not(:has(nav.breadcrumbs)) {
+    justify-content: end;
+  }
+
+  .breadcrumbs {
+    flex: 1 1 auto;
+  }
+
+  #theme-toggle {
+    flex-shrink: 0;
+  }
+}
+
 .last-updated {
   font-variant: all-petite-caps;
   font-weight: 600;
@@ -111,6 +135,10 @@ li {
     rgba(var(--color-rose-rgb), 0.1),
     rgba(var(--color-foam-rgb), 0.1)
   );
+
+  @media only screen and (max-width: 400px) {
+    align-items: center;
+  }
 
   .changelog {
     &::before {
@@ -153,7 +181,7 @@ svg.rss {
 
 nav.breadcrumbs {
   color: var(--color-subtle);
-  margin-block-end: 2rem;
+  margin-block-end: 1rem;
 }
 
 .metadata {
@@ -163,6 +191,10 @@ nav.breadcrumbs {
 
 .email {
   text-align: center;
+}
+
+.hidden {
+  display: none;
 }
 
 // Safont webring

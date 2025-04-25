@@ -20,19 +20,23 @@
             <h1>sentimentalfuturist.net</h1>
         </header>
         <main>
-            {% if breadcrumb %}
-                <nav class="breadcrumbs">
-                    {{ breadcrumb | safe }}
-                </nav>
-            {% endif %}
+            <div class="toolbar">
+                {% if breadcrumb %}
+                    <nav class="breadcrumbs">
+                        {{ breadcrumb | safe }}
+                    </nav>
+                {% endif %}
+                <button id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle light and dark mode"></button>
+            </div>
             {{ content | safe }}
         </main>
         <footer>
             <nav aria-label="Footer navigation">
                 <ul class="footer-links">
                     <li>
-                        <a href="https://sentimentalfuturist.net">sentimentalfuturist.net</a>:                         perpetrated in the future
-                        <span id="year"></span>
+                        <a href="https://sentimentalfuturist.net">sentimentalfuturist.net</a>: perpetrated in the future
+                                                                                                                in
+                        {{ now | date("yyyy") }}
                     </li>
                     <li>
                         <a href="/colophon">Colophon</a>

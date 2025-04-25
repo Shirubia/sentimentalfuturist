@@ -1,7 +1,3 @@
-// display current year
-const yearElement = document.getElementById("year");
-yearElement.textContent = " in " + new Date().getFullYear();
-
 // tagline
 function displayRandomTagline() {
   var taglines = [
@@ -19,15 +15,51 @@ function displayRandomTagline() {
     "\"getting old isn't a curse, it's an achievement\" &mdash;a philosopher",
   ];
 
-  var randomIndex = Math.floor(Math.random() * taglines.length);
-  var randomTagline = taglines[randomIndex];
-
-  var taglineElement = document.getElementById("tagline");
+  const taglineElement = document.getElementById("tagline");
   if (taglineElement) {
-    taglineElement.innerHTML = randomTagline;
+    const randomIndex = Math.floor(Math.random() * taglines.length);
+    taglineElement.innerHTML = taglines[randomIndex];
+    taglineElement.classList.remove("hidden");
   }
 }
 
-window.addEventListener("load", function () {
-  displayRandomTagline();
+window.addEventListener("load", displayRandomTagline);
+
+// theme toggle
+function setTheme(theme) {
+  const toggleButton = document.getElementById("theme-toggle");
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  toggleButton.textContent = theme === "dark" ? "🌝" :"🌚" ;
+}
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  if (currentTheme === "dark") {
+    setTheme("light");
+  } else {
+    setTheme("dark");
+  }
+}
+
+function initTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    // no saved preference = follow system preference
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    setTheme(prefersDark ? "dark" : "light");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initTheme();
+
+  const toggleButton = document.getElementById("theme-toggle");
+  if (toggleButton) {
+    toggleButton.addEventListener("click", toggleTheme);
+  }
 });

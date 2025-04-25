@@ -10,6 +10,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginRss);
 
+  eleventyConfig.addGlobalData("now", () => new Date());
+
   // Watch CSS files for changes
   eleventyConfig.setBrowserSyncConfig({
     files: "./_site/assets/css/**/*.css",

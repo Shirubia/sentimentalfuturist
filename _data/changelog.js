@@ -10,5 +10,9 @@ module.exports = () => {
       date: DateTime.fromISO("2025-04-24"),
       text: '<ul><li>There are new links in the <a href="/links">links</a> page, and also a new button to link to this site</li><li>Added cache busting</li></ul>',
     },
+    {
+      date: DateTime.fromISO("2025-04-25"),
+      text: "<ul><li>Added dark mode!</li></ul>",
+    },
   ].sort((a, b) => b.date - a.date);
 };
