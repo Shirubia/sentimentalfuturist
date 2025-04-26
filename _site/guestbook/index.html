@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>sentimental futurist · Changelog</title>
+        <title>sentimental futurist · Guestbook</title>
         <link
             rel="icon"
             href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22
@@ -23,57 +23,45 @@
             <div class="toolbar">
                 
                     <nav class="breadcrumbs">
-                        <a href="/">Home</a> &#187; <a href="/log">Changelog</a>
+                        <a href="/">Home</a> &#187; <a href="/guestbook">Guestbook</a>
                     </nav>
                 
                 <button id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle light and dark mode"></button>
             </div>
             
-<h2>Changelog</h2>
-<p>You can subscribe to the changelog's
-    <a href="feed.xml" class="rss">RSS feed
-        <svg class="rss" viewBox="0 0 800 800">
-            <path d="M493 652H392c0-134-111-244-244-244V307c189 0 345 156 345 345zm71 0c0-228-188-416-416-416V132c285 0 520 235 520 520z"></path>
-            <circle cx="219" cy="581" r="71"></circle>
-        </svg>
-    </a></p>
-
-    <article>
-        <h3>
-            <time datetime="2025-04-26T00:00:00.000+02:00" title="26/04/2025 (DD/MM/YYYY)">
-                26/04/2025
-            </time>
-        </h3>
-        <p>I'm taking advantage of the fact that I have a few days off to work on the website as much as I can. As you can see 🤭</p><ul><li>Added <a href="/guestbook">a guestbook</a>!</li><li>Updated the <a href="/links">links</a> page with a new link</li></ul>
-    </article>
-
-    <article>
-        <h3>
-            <time datetime="2025-04-25T00:00:00.000+02:00" title="25/04/2025 (DD/MM/YYYY)">
-                25/04/2025
-            </time>
-        </h3>
-        <ul><li>Added dark mode!</li></ul>
-    </article>
-
-    <article>
-        <h3>
-            <time datetime="2025-04-24T00:00:00.000+02:00" title="24/04/2025 (DD/MM/YYYY)">
-                24/04/2025
-            </time>
-        </h3>
-        <ul><li>There are new links in the <a href="/links">links</a> page, and also a new button to link to this site</li><li>Added cache busting</li></ul>
-    </article>
-
-    <article>
-        <h3>
-            <time datetime="2025-04-23T00:00:00.000+02:00" title="23/04/2025 (DD/MM/YYYY)">
-                23/04/2025
-            </time>
-        </h3>
-        <ul><li>Finally added a real changelog (this one!)</li><li>General redesign and restructuring of the site and migration to Eleventy</li></ul>
-    </article>
-
+<h2>Guestbook</h2>
+<div class="gb-intro">
+    <p>Thanks for stopping by! If you enjoyed your visit
+        <small>(or not, who knows)</small>
+        you can leave a public message here for posterity. Just like in the good old days of yore!</p>
+    <p>
+        <small>The old guestbook is archived
+            <a href="/gb/">here</a>.</small>
+    </p>
+</div>
+<script async="async" src="https://guestbooks.meadow.cafe/resources/js/embed_script/539/script.js"></script>
+<div id="guestbooks___guestbook-form-container">
+    <form id="guestbooks___guestbook-form" action="https://guestbooks.meadow.cafe/guestbook/539/submit" method="post">
+        <div class="guestbooks___input-container">
+            <input placeholder="Name" type="text" id="name" name="name" required="required"></div>
+            <div class="guestbooks___input-container">
+                <input placeholder="Website (optional)" type="url" id="website" name="website"></div>
+                <div class="guestbooks___input-container">
+                    <textarea placeholder="Message (plain text only)..." id="text" name="text" required="required"></textarea>
+                </div>
+                <div id="guestbooks___challenge-answer-container"></div>
+                <input type="submit" value="Submit">
+                    <div id="guestbooks___error-message"></div>
+                </form>
+            </div>
+            <div id="guestbooks___guestbook-made-with" style="text-align: right;">
+                <small>Lovingly made with
+                    <a target="_blank" href="https://guestbooks.meadow.cafe">Guestbooks</a>
+                </small>
+            </div>
+            <hr/>
+            <h2 id="guestbooks___guestbook-messages-header">Messages</h2>
+            <div id="guestbooks___guestbook-messages-container"></div>
         </main>
         <footer>
             <nav aria-label="Footer navigation">

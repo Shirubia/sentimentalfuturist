@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Guestbook
+date: Last Modified
+permalink: /guestbook/
+createdDate: 2025-04-26
+breadcrumb: '<a href="/">Home</a> &#187; <a href="/guestbook">Guestbook</a>'
+---
+
+<h2>Guestbook</h2>
+<div class="gb-intro">
+    <p>Thanks for stopping by! If you enjoyed your visit
+        <small>(or not, who knows)</small>
+        you can leave a public message here for posterity. Just like in the good old days of yore!</p>
+    <p>
+        <small>The old guestbook is archived
+            <a href="/gb/">here</a>.</small>
+    </p>
+</div>
+<script async="async" src="https://guestbooks.meadow.cafe/resources/js/embed_script/539/script.js"></script>
+<div id="guestbooks___guestbook-form-container">
+    <form id="guestbooks___guestbook-form" action="https://guestbooks.meadow.cafe/guestbook/539/submit" method="post">
+        <div class="guestbooks___input-container">
+            <input placeholder="Name" type="text" id="name" name="name" required="required"></div>
+            <div class="guestbooks___input-container">
+                <input placeholder="Website (optional)" type="url" id="website" name="website"></div>
+                <div class="guestbooks___input-container">
+                    <textarea placeholder="Message (plain text only)..." id="text" name="text" required="required"></textarea>
+                </div>
+                <div id="guestbooks___challenge-answer-container"></div>
+                <input type="submit" value="Submit">
+                    <div id="guestbooks___error-message"></div>
+                </form>
+            </div>
+            <div id="guestbooks___guestbook-made-with" style="text-align: right;">
+                <small>Lovingly made with
+                    <a target="_blank" href="https://guestbooks.meadow.cafe">Guestbooks</a>
+                </small>
+            </div>
+            <hr/>
+            <h2 id="guestbooks___guestbook-messages-header">Messages</h2>
+            <div id="guestbooks___guestbook-messages-container"></div>

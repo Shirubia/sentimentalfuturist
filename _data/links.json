@@ -123,5 +123,10 @@
     "name": "Bechno Kid",
     "url": "https://bechnokid.neocities.org/",
     "img": "https://raw.githubusercontent.com/bechnokid/neocities/refs/heads/master/public/assets/images/button.png"
+  },
+  {
+    "name": "Mana",
+    "url": "https://peachmoon.moe/",
+    "img": "/assets/img/links/peachmoon.gif"
   }
 ]
