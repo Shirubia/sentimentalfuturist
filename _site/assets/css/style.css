@@ -47,7 +47,7 @@ h6 {
 
 blockquote,
 q {
-  border-left: 4px solid var(--color-rose);
+  border-inline-start: 4px solid var(--color-rose);
   margin: 1.5rem;
   padding: 0.5rem 1rem;
   font-style: italic;
@@ -63,7 +63,7 @@ blockquote cite {
 }
 
 mark {
-  background-color: rgba(var(--color-gold-rgb), 0.3);
+  background-color: var(--color-gold);
   border-radius: 2px;
   padding: 0 2px 0 2px;
 }
@@ -74,7 +74,7 @@ strong {
 }
 
 dl {
-  border: 1px dotted var(--color-love);
+  border: 1px dotted var(--color-iris);
   padding: 1rem;
 }
 dl dt {
@@ -146,11 +146,11 @@ table caption {
 }
 
 thead {
-  border-bottom: 1px solid var(--color-highlight-high);
+  border-block-end: 1px solid var(--color-highlight-high);
 }
 
 tfoot {
-  border-top: 1px solid var(--color-highlight-high);
+  border-block-start: 1px solid var(--color-highlight-high);
 }
 
 tbody tr:nth-child(odd) {
@@ -167,18 +167,18 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  border-bottom: 1px dotted var(--color-love);
+  border-block-end: 1px dotted var(--color-love);
 }
 a:hover {
   color: var(--color-foam);
-  border-bottom: 1px dotted var(--color-foam);
+  border-block-end: 1px dotted var(--color-foam);
   transition: all 0.5s ease-in-out;
 }
 a:has(img) {
-  border-bottom: none;
+  border-block-end: none;
 }
 a:has(img):hover {
-  border-bottom: none;
+  border-block-end: none;
 }
 
 a[href^="http://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
@@ -214,29 +214,87 @@ a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after {
   margin: 2rem 0;
 }
 
-button {
-  font-family: "IBM Plex Mono", monospace;
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  cursor: pointer;
+}
+
+input,
+button,
+textarea {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  font-family: inherit;
+  font-size: inherit;
+  margin-block-end: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  background-color: var(--color-surface);
+  padding-inline-start: 2rem;
+  padding-inline-end: 2rem;
+}
+button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover {
+  background: var(--color-highlight-high);
+}
+
+label {
+  vertical-align: middle;
+  margin-block-end: 0.5rem;
+  display: inline-block;
+  color: var(--text-color);
+}
+
+textarea {
+  display: block;
+  margin-inline-end: 0;
+  box-sizing: border-box;
+  resize: vertical;
+}
+textarea:not([cols]) {
+  width: 100%;
+}
+textarea:not([rows]) {
+  min-height: 40px;
+  height: 140px;
+}
+
+input:focus,
+button:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px var(--color-love);
+}
+
+::placeholder {
+  color: var(--color-muted);
 }
 
 #theme-toggle {
-  cursor: pointer;
   font-size: 16px;
   width: 30px;
   height: 30px;
   background: none;
-  border: 1px solid var(--color-text);
+  border: 1px solid var(--color-love);
   border-radius: 100%;
   color: var(--color-text);
+  padding: 0;
   transition: all 0.5s ease;
 }
 #theme-toggle:hover {
   background-color: var(--color-surface);
-  border-color: var(--color-love);
-  color: var(--color-love);
-}
-#theme-toggle:focus {
-  outline: 2px solid var(--color-love);
-  outline-offset: 2px;
+  border-color: var(--color-foam);
 }
 
 header {
@@ -311,6 +369,22 @@ footer nav ul.footer-links li {
   display: inline;
 }
 
+.gb-intro {
+  margin-block-end: 2rem;
+}
+
+#guestbooks___guestbook-messages-container div {
+  margin-block-end: 1rem;
+  padding: 0.5rem 1rem 2rem 1rem;
+  border: 1px dotted var(--color-iris);
+}
+#guestbooks___guestbook-messages-container div blockquote {
+  font-style: normal;
+  border-inline-start: none;
+  margin: 0;
+  padding: 0;
+}
+
 img,
 video {
   max-width: 100%;
@@ -319,7 +393,8 @@ video {
 
 hr {
   border: none;
-  border-top: 1px dashed var(--color-love);
+  border-block-start: 1px dotted var(--color-rose);
+  margin: 2rem 0;
 }
 
 details {

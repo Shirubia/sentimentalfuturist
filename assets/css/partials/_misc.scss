@@ -6,7 +6,8 @@ video {
 
 hr {
   border: none;
-  border-top: 1px dashed var(--color-love);
+  border-block-start: 1px dotted var(--color-rose);
+  margin: 2rem 0;
 }
 
 details {
@@ -147,6 +148,7 @@ li {
       font-size: 1.2rem;
       color: var(--color-love);
     }
+
     @media only screen and (max-width: 400px) {
       &::before {
         content: "";
@@ -158,8 +160,10 @@ li {
 .joined {
   text-align: center;
   margin: 2rem 0;
+
   p {
     margin: 1.5rem 0;
+
     &.sprites {
       margin-top: 1.5rem;
     }

@@ -18,7 +18,7 @@ h6 {
 
 blockquote,
 q {
-  border-left: 4px solid var(--color-rose);
+  border-inline-start: 4px solid var(--color-rose);
   margin: 1.5rem;
   padding: 0.5rem 1rem;
   font-style: italic;
@@ -34,7 +34,7 @@ blockquote cite {
 }
 
 mark {
-  background-color: rgba(var(--color-gold-rgb), 0.3);
+  background-color: var(--color-gold);
   border-radius: 2px;
   padding: 0 2px 0 2px;
 }
@@ -45,7 +45,7 @@ strong {
 }
 
 dl {
-  border: 1px dotted var(--color-love);
+  border: 1px dotted var(--color-iris);
   padding: 1rem;
 
   dt {

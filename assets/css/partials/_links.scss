@@ -4,19 +4,19 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  border-bottom: 1px dotted var(--color-love);
+  border-block-end: 1px dotted var(--color-love);
 
   &:hover {
     color: var(--color-foam);
-    border-bottom: 1px dotted var(--color-foam);
+    border-block-end: 1px dotted var(--color-foam);
     transition: all 0.5s ease-in-out;
   }
 
   &:has(img) {
-    border-bottom: none;
+    border-block-end: none;
 
     &:hover {
-      border-bottom: none;
+      border-block-end: none;
     }
   }
 }
