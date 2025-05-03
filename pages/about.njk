@@ -5,6 +5,7 @@ permalink: /about/
 breadcrumb: '<a href="/">Home</a> &#187; <a href="/about">About</a>'
 date: Last Modified
 createdDate: 2023-10-10
+modifiedDate: 2025-04-26
 ---
 
 <h2>About the webmaster</h2>
@@ -13,7 +14,7 @@ createdDate: 2023-10-10
     <dd>
         <em>adj.</em>
         of or prompted by feelings of tenderness, sadness,
-                                              or nostalgia.
+                                                      or nostalgia.
     </dd>
     <dt>futurist</dt>
     <dd>
@@ -41,9 +42,9 @@ createdDate: 2023-10-10
 <div class="metadata">
     <p>
         Page created:
-        <time datetime="{{ createdDate | readableCreatedDate }}" title="{{ createdDate | readableCreatedDate }} (DD/MM/YYYY)">{{ createdDate|readableCreatedDate }}</time>, last updated:
-        <time datetime="{{ page.date | date('yyyy-LL-dd') }}" title="{{ page.date | readableDate }} (DD/MM/YYYY)">
-            {{ page.date | readableDate }}
+        <time datetime="{{ createdDate | readableStringDate }}" title="{{ createdDate | readableStringDate }} (DD/MM/YYYY)">{{ createdDate|readableStringDate }}</time>, last updated:
+        <time datetime="{{ modifiedDate | date('yyyy-LL-dd') }}" title="{{ modifiedDate | readableStringDate }} (DD/MM/YYYY)">
+            {{ modifiedDate | readableStringDate }}
         </time>
     </p>
 </div>

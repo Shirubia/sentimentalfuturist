@@ -3,6 +3,7 @@ layout: layouts/base.njk
 title: Home
 date: Last Modified
 createdDate: 2025-04-20
+modifiedDate: 2025-05-03
 ---
 
 <blockquote id="tagline" class="hidden"></blockquote>
@@ -16,11 +17,11 @@ createdDate: 2025-04-20
   where small things will eventually grow.
 </p>
 <div class="last-updated">
-  {% if page.date %}
+  {% if modifiedDate %}
     <p>
       Last updated:
-      <time datetime="{{ page.date | date('yyyy-LL-dd') }}" title="{{ page.date | readableDate }} (DD/MM/YYYY)">
-        {{ page.date | readableDate }}
+      <time datetime="{{ modifiedDate | readableStringDate }}" title="{{ modifiedDate | readableStringDate }} (DD/MM/YYYY)">
+        {{ modifiedDate | readableStringDate }}
       </time>
     </p>
   {% endif %}

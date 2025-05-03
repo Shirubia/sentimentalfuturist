@@ -4,6 +4,7 @@ title: Now
 date: Last Modified
 permalink: /now/
 createdDate: 2025-04-21
+modifiedDate: 2025-04-26
 breadcrumb: '<a href="/">Home</a> &#187; <a href="/now">Now</a>'
 ---
 
@@ -12,8 +13,7 @@ breadcrumb: '<a href="/">Home</a> &#187; <a href="/now">Now</a>'
     <a href="https://nownownow.com/about">now</a>
     page and was last updated on
     <strong>
-        <time datetime="{{ page.date | date('yyyy-LL-dd') }}" title="{{ page.date | readableDate }} (DD/MM/YYYY)">{{ page.date | readableDate }}</time>
-    </strong>.
+        <time datetime="{{ modifiedDate | date('yyyy-LL-dd') }}" title="{{ modifiedDate | readableStringDate }} (DD/MM/YYYY)">{{ modifiedDate | readableStringDate }}</time></strong>.
 </p>
 <h3>Work & life</h3>
 <p>Living in Castellón (it's been a year now!) with husbando♡. Still working as a software engineer, mostly focused on

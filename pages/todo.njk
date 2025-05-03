@@ -5,6 +5,7 @@ permalink: /todo/
 breadcrumb: '<a href="/">Home</a> &#187; <a href="/todo">To-do list</a>'
 date: Last Modified
 createdDate: 2025-04-21
+modifiedDate: 2025-04-26
 ---
 
 <h2>To-do list</h2>
@@ -38,9 +39,9 @@ createdDate: 2025-04-21
 <div class="metadata">
     <p>
         Page created:
-        <time datetime="{{ createdDate | readableCreatedDate }}" title="{{ createdDate | readableCreatedDate }} (DD/MM/YYYY)">{{ createdDate|readableCreatedDate }}</time>, last updated:
-        <time datetime="{{ page.date | date('yyyy-LL-dd') }}" title="{{ page.date | readableDate }} (DD/MM/YYYY)">
-            {{ page.date | readableDate }}
+        <time datetime="{{ createdDate | readableStringDate }}" title="{{ createdDate | readableStringDate }} (DD/MM/YYYY)">{{ createdDate|readableStringDate }}</time>, last updated:
+        <time datetime="{{ modifiedDate | date('yyyy-LL-dd') }}" title="{{ modifiedDate | readableStringDate }} (DD/MM/YYYY)">
+            {{ modifiedDate | readableStringDate }}
         </time>
     </p>
 </div>

@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter(
-    "readableCreatedDate",
+    "readableStringDate",
     (value, format = "dd/MM/yyyy") => {
       if (!value) return "Missing date";
 

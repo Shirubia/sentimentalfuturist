@@ -4,6 +4,7 @@ title: Links
 date: Last Modified
 permalink: /links/
 createdDate: 2023-10-10
+modifiedDate: 2025-05-03
 breadcrumb: '<a href="/">Home</a> &#187; <a href="/links">Links</a>'
 ---
 
@@ -35,9 +36,9 @@ breadcrumb: '<a href="/">Home</a> &#187; <a href="/links">Links</a>'
 <div class="metadata">
     <p>
         Page created:
-        <time datetime="{{ createdDate | readableCreatedDate }}" title="{{ createdDate | readableCreatedDate }} (DD/MM/YYYY)">{{ createdDate|readableCreatedDate }}</time>, last updated:
-        <time datetime="{{ page.date | date('yyyy-LL-dd') }}" title="{{ page.date | readableDate }} (DD/MM/YYYY)">
-            {{ page.date | readableDate }}
+        <time datetime="{{ createdDate | readableStringDate }}" title="{{ createdDate | readableStringDate }} (DD/MM/YYYY)">{{ createdDate|readableStringDate }}</time>, last updated:
+        <time datetime="{{ modifiedDate | date('yyyy-LL-dd') }}" title="{{ modifiedDate | readableStringDate }} (DD/MM/YYYY)">
+            {{ modifiedDate | readableStringDate }}
         </time>
     </p>
 </div>
