@@ -148,5 +148,31 @@
     "name": "Shishka",
     "url": "https://shishka.neocities.org/",
     "img": "/assets/img/links/shishka.gif"
+  },
+  {
+    "name": "Princss",
+    "url": "https://princss.online/",
+    "img": "https://princss.online/media/images/buttons/princss_button.png"
+  },
+  {
+    "name": "Cepheus",
+    "url": "https://cepheus.neocities.org/",
+    "img": "/assets/img/links/cepheus.gif"
+  },
+  {
+    "name": "Censorine",
+    "url": "https://censorine.com/",
+    "img": "/assets/img/links/censoria.png"
+  },
+  {
+    "name": "Aevisia",
+    "url": "https://thecozy.cat/",
+    "img": "/assets/img/links/thecozycat.gif"
+  }
+  ,
+  {
+    "name": "Loren",
+    "url": "https://ribo.zone/",
+    "img": "/assets/img/links/ribozone.gif"
   }
 ]
