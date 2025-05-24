@@ -1,5 +1,15 @@
-body {
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
   color: #222;
   background-color: #ece9d8;
   margin: 0 auto;
@@ -103,19 +113,55 @@ body {
     transition: all 0.3s linear;
   }
 
+  /* Pure masonry CSS layout: //w3bits.com/css-masonry/ */
   .items {
-    position: relative;
-    column-width: 60ch;
-    inline-size: 100%;
+    margin: 1.5em auto;
+    column-gap: 1.5em;
 
     div.item {
       margin: 0.3rem;
+      width: 100%;
 
       img {
         border: 5px solid #fff;
-        width: 60ch;
-        max-width: calc(100% - 10px); // 100% minus left and right border widths
+        width: inherit;
+        max-width: 100%;
       }
+    }
+  }
+
+  /* Masonry on extra extra large screens */
+  @media only screen and (min-width: 1600px) {
+    .items {
+      column-count: 6;
+    }
+  }
+
+  /* Masonry on extra large screens */
+  @media only screen and (max-width: 1599px) and (min-width: 1400px) {
+    .items {
+      column-count: 5;
+    }
+  }
+
+  /* Masonry on large screens */
+  @media only screen and (max-width: 1399px) and (min-width: 1093px) {
+    .items {
+      column-count: 4;
+    }
+  }
+
+  /* Masonry on medium-sized screens */
+  @media only screen and (max-width: 1092px) and (min-width: 868px) {
+    .items {
+      column-count: 3;
+    }
+  }
+
+  /* Masonry on small screens */
+  @media only screen and (max-width: 867px) and (min-width: 576px) {
+    .items {
+      column-count: 2;
     }
   }
 }

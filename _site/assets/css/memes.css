@@ -1,8 +1,24 @@
-body {
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
   color: #222;
   background-color: #ece9d8;
   margin: 0 auto;
+  /* Pure masonry CSS layout: //w3bits.com/css-masonry/ */
+  /* Masonry on extra extra large screens */
+  /* Masonry on extra large screens */
+  /* Masonry on large screens */
+  /* Masonry on medium-sized screens */
+  /* Masonry on small screens */
 }
 body main.container {
   margin: 1rem;
@@ -89,17 +105,42 @@ body .filters label:hover {
   transition: all 0.3s linear;
 }
 body .items {
-  position: relative;
-  column-width: 60ch;
-  inline-size: 100%;
+  margin: 1.5em auto;
+  column-gap: 1.5em;
 }
 body .items div.item {
   margin: 0.3rem;
+  width: 100%;
 }
 body .items div.item img {
   border: 5px solid #fff;
-  width: 60ch;
-  max-width: calc(100% - 10px);
+  width: inherit;
+  max-width: 100%;
+}
+@media only screen and (min-width: 1600px) {
+  body .items {
+    column-count: 6;
+  }
+}
+@media only screen and (max-width: 1599px) and (min-width: 1400px) {
+  body .items {
+    column-count: 5;
+  }
+}
+@media only screen and (max-width: 1399px) and (min-width: 1093px) {
+  body .items {
+    column-count: 4;
+  }
+}
+@media only screen and (max-width: 1092px) and (min-width: 868px) {
+  body .items {
+    column-count: 3;
+  }
+}
+@media only screen and (max-width: 867px) and (min-width: 576px) {
+  body .items {
+    column-count: 2;
+  }
 }
 
 /*# sourceMappingURL=memes.css.map */
