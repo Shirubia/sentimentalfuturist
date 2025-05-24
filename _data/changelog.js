@@ -22,9 +22,13 @@ module.exports = () => {
       date: DateTime.fromISO("2025-05-03"),
       text: '<p>Added new links to the <a href="/links">links</a> page.</p>',
     },
-        {
+    {
       date: DateTime.fromISO("2025-05-18"),
       text: '<p>Another small update to add new <a href="/links">links</a>.</p>',
+    },
+    {
+      date: DateTime.fromISO("2025-05-24"),
+      text: '<p>Finally migrated the <a href="/memes">meme gallery</a> to Eleventy and refactored the template to use global data, making it easier to manage. Also added a couple of new memes.</p>',
     },
   ].sort((a, b) => b.date - a.date);
 };

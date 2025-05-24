@@ -1,0 +1,105 @@
+body {
+  box-sizing: border-box;
+  color: #222;
+  background-color: #ece9d8;
+  margin: 0 auto;
+}
+body main.container {
+  margin: 1rem;
+}
+body main.container .intro {
+  max-width: 1024px;
+  margin: 3rem auto;
+}
+body h1,
+body h2,
+body footer,
+body .center {
+  text-align: center;
+}
+body #update-date {
+  font-weight: bold;
+}
+body .nav {
+  padding: 1rem 0;
+}
+body footer {
+  margin: 3rem 1rem;
+}
+body .filter-wrap input[type=radio] {
+  left: -9999px;
+  position: absolute;
+}
+body [value=all]:checked ~ .filters [for=all],
+body [value=spanish]:checked ~ .filters [for=spanish],
+body [value=favorite]:checked ~ .filters [for=favorite],
+body [value=wednesday]:checked ~ .filters [for=wednesday],
+body [value=reaction]:checked ~ .filters [for=reaction],
+body [value=sm]:checked ~ .filters [for=sm],
+body [value=wholesome]:checked ~ .filters [for=wholesome],
+body [value=anime]:checked ~ .filters [for=anime],
+body [value=society]:checked ~ .filters [for=society],
+body [value=it]:checked ~ .filters [for=it],
+body [value=lgbt]:checked ~ .filters [for=lgbt],
+body [value=text]:checked ~ .filters [for=text],
+body [value=all]:checked ~ .filters [data-category] {
+  display: block;
+}
+body [value=spanish]:checked ~ .items .item:not([data-category~=spanish]),
+body [value=favorite]:checked ~ .items .item:not([data-category~=favorite]),
+body [value=wednesday]:checked ~ .items .item:not([data-category~=wednesday]),
+body [value=reaction]:checked ~ .items .item:not([data-category~=reaction]),
+body [value=sm]:checked ~ .items .item:not([data-category~=sm]),
+body [value=wholesome]:checked ~ .items .item:not([data-category~=wholesome]),
+body [value=anime]:checked ~ .items .item:not([data-category~=anime]),
+body [value=society]:checked ~ .items .item:not([data-category~=society]),
+body [value=it]:checked ~ .items .item:not([data-category~=it]),
+body [value=lgbt]:checked ~ .items .item:not([data-category~=lgbt]),
+body [value=text]:checked ~ .items .item:not([data-category~=text]) {
+  display: none;
+}
+body .filters {
+  max-width: 1024px;
+  text-align: center;
+  margin: 0 auto 2rem;
+}
+body .filters label {
+  font-size: 1rem;
+  background-color: #fff;
+  border-radius: 4rem;
+  color: #222;
+  border: 1px solid #222;
+  cursor: pointer;
+  margin: 2px;
+  padding: 2px 5px;
+  transition: all 0.3s linear;
+}
+body .filters label span {
+  display: inline-block;
+  margin: 0 5px 4px 0;
+  vertical-align: bottom;
+}
+body .filters label:checked {
+  border: 3px solid red;
+}
+body .filters label:hover {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: all 0.3s linear;
+}
+body .items {
+  position: relative;
+  column-width: 60ch;
+  inline-size: 100%;
+}
+body .items div.item {
+  margin: 0.3rem;
+}
+body .items div.item img {
+  border: 5px solid #fff;
+  width: 60ch;
+  max-width: calc(100% - 10px);
+}
+
+/*# sourceMappingURL=memes.css.map */

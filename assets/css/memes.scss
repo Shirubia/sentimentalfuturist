@@ -1,0 +1,121 @@
+body {
+  box-sizing: border-box;
+  color: #222;
+  background-color: #ece9d8;
+  margin: 0 auto;
+
+  main.container {
+    margin: 1rem;
+
+    .intro {
+      max-width: 1024px;
+      margin: 3rem auto;
+    }
+  }
+
+  h1,
+  h2,
+  footer,
+  .center {
+    text-align: center;
+  }
+
+  #update-date {
+    font-weight: bold;
+  }
+
+  .nav {
+    padding: 1rem 0;
+  }
+
+  footer {
+    margin: 3rem 1rem;
+  }
+
+  // filters
+  .filter-wrap input[type="radio"] {
+    left: -9999px;
+    position: absolute;
+  }
+
+  [value="all"]:checked ~ .filters [for="all"],
+  [value="spanish"]:checked ~ .filters [for="spanish"],
+  [value="favorite"]:checked ~ .filters [for="favorite"],
+  [value="wednesday"]:checked ~ .filters [for="wednesday"],
+  [value="reaction"]:checked ~ .filters [for="reaction"],
+  [value="sm"]:checked ~ .filters [for="sm"],
+  [value="wholesome"]:checked ~ .filters [for="wholesome"],
+  [value="anime"]:checked ~ .filters [for="anime"],
+  [value="society"]:checked ~ .filters [for="society"],
+  [value="it"]:checked ~ .filters [for="it"],
+  [value="lgbt"]:checked ~ .filters [for="lgbt"],
+  [value="text"]:checked ~ .filters [for="text"],
+  [value="all"]:checked ~ .filters [data-category] {
+    display: block;
+  }
+
+  [value="spanish"]:checked ~ .items .item:not([data-category~="spanish"]),
+  [value="favorite"]:checked ~ .items .item:not([data-category~="favorite"]),
+  [value="wednesday"]:checked ~ .items .item:not([data-category~="wednesday"]),
+  [value="reaction"]:checked ~ .items .item:not([data-category~="reaction"]),
+  [value="sm"]:checked ~ .items .item:not([data-category~="sm"]),
+  [value="wholesome"]:checked ~ .items .item:not([data-category~="wholesome"]),
+  [value="anime"]:checked ~ .items .item:not([data-category~="anime"]),
+  [value="society"]:checked ~ .items .item:not([data-category~="society"]),
+  [value="it"]:checked ~ .items .item:not([data-category~="it"]),
+  [value="lgbt"]:checked ~ .items .item:not([data-category~="lgbt"]),
+  [value="text"]:checked ~ .items .item:not([data-category~="text"]) {
+    display: none;
+  }
+
+  .filters {
+    max-width: 1024px;
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+
+  .filters label {
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 4rem;
+    color: #222;
+    border: 1px solid #222;
+    cursor: pointer;
+    margin: 2px;
+    padding: 2px 5px;
+    transition: all 0.3s linear;
+
+    span {
+      display: inline-block;
+      margin: 0 5px 4px 0;
+      vertical-align: bottom;
+    }
+
+    &:checked {
+      border: 3px solid red;
+    }
+  }
+
+  .filters label:hover {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all 0.3s linear;
+  }
+
+  .items {
+    position: relative;
+    column-width: 60ch;
+    inline-size: 100%;
+
+    div.item {
+      margin: 0.3rem;
+
+      img {
+        border: 5px solid #fff;
+        width: 60ch;
+        max-width: calc(100% - 10px); // 100% minus left and right border widths
+      }
+    }
+  }
+}

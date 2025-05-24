@@ -1,0 +1,77 @@
+---
+layout: layouts/memes.njk
+title: Meme garden🪴
+date: Last Modified
+permalink: /memes/
+createdDate: 2025-05-24
+modifiedDate: 2025-05-24
+---
+
+<h1>meme garden🪴</h1>
+<div class="intro">
+    <p id="update-date">
+        Last modified date:
+        <time datetime="{{ modifiedDate | date('yyyy-LL-dd') }}" title="{{ modifiedDate | readableStringDate }} (DD/MM/YYYY)">
+            {{ modifiedDate | readableStringDate }}
+        </time>
+    </p>
+    <p>
+        Hello! Welcome to my collection of memes, reaction images and other funny eccentricities, carefully harvested by hand
+        and stored for future reference. If you want to use any of these images please upload them to your own server and do not
+        direct link ☺
+    </p>
+    <p>
+        PS: I have a hard time categorizing things (bear with me ✌️🥲). Of course, I sorted all this into the categories that
+        made the most sense to me, so half of them will probably be useless to you. Enjoy! (?)
+    </p>
+    <p class="center nav">
+        <a href="https://sentimentalfuturist.net">&lArr; back to sentimentalfuturist.net</a>
+        &middot;
+        <a href="#bottom">go to bottom &dArr;</a>
+    </p>
+</div>
+<div class="filters">
+    <label for="all">
+        <span>👀</span>Show All</label>
+    <label for="favorite" title="Personal faves, also memes I tend to use more">
+        <span>✨</span>My faves</label>
+    <label for="reaction">
+        <span>🤦‍♀️</span>Reactions</label>
+    <label for="lgbt">
+        <span>🏳️‍🌈</span>LGBTIA+</label>
+    <label for="it">
+        <span>💻</span>IT</label>
+    <label for="wholesome" title="Innocent humor and reactions that warm the heart">
+        <span>💖</span>Wholesome</label>
+    <label for="anime">
+        <span>🗼</span>Manga/Anime</label>
+    <label for="society" title="Economy, politics and social commentary">
+        <span>🤔</span>We live in a society</label>
+    <label for="spanish" title="Both things in Spanish and/or related to Spain">
+        <span>🥘</span>Spanish things</label>
+    <label for="text" title="I like reading silly stuff">
+        <span>📄</span>Text, mostly</label>
+    <label for="wednesday" title="for specific dates or days of the week">
+        <span>📅</span>Date specific</label>
+</div>
+<div class="filter-wrap">
+    <input type="radio" id="all" name="filter" value="all" checked/>
+    <input type="radio" id="favorite" name="filter" value="favorite"/>
+    <input type="radio" id="reaction" name="filter" value="reaction"/>
+    <input type="radio" id="wednesday" name="filter" value="wednesday"/>
+    <input type="radio" id="sm" name="filter" value="sm"/>
+    <input type="radio" id="it" name="filter" value="it"/>
+    <input type="radio" id="wholesome" name="filter" value="wholesome"/>
+    <input type="radio" id="anime" name="filter" value="anime"/>
+    <input type="radio" id="society" name="filter" value="society"/>
+    <input type="radio" id="spanish" name="filter" value="spanish"/>
+    <input type="radio" id="lgbt" name="filter" value="lgbt"/>
+    <input type="radio" id="text" name="filter" value="text"/>
+    <div class="items">
+        {% for meme in memes %}
+            <div class="item" data-category="{{ meme.category }}">
+                <img loading="lazy" src="img/{{ meme.img }}" alt="{{ meme.alt }}"/>
+            </div>
+        {% endfor %}
+    </div>
+</div>

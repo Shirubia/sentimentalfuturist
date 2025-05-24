@@ -168,11 +168,20 @@
     "name": "Aevisia",
     "url": "https://thecozy.cat/",
     "img": "/assets/img/links/thecozycat.gif"
-  }
-  ,
+  },
   {
     "name": "Loren",
     "url": "https://ribo.zone/",
     "img": "/assets/img/links/ribozone.gif"
+  },
+  {
+    "name": "mellye.liu",
+    "url": "https://mellyeliu.online/",
+    "textOnly": true
+  },
+  {
+    "name": "olu.online",
+    "url": "https://olu.online/",
+    "textOnly": true
   }
 ]

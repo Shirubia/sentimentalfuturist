@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{{ "sentimental futurist · " + title }}</title>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22
+                font-size=%2290%22>😺</text></svg>"/>
+        <link rel="stylesheet" href="/assets/css/memes.css{{ nocache }}"/>
+        <link rel="stylesheet" href="https://unpkg.com/xp.css"/>
+    </head>
+    <body>
+        <main class="container">
+            {{ content | safe }}
+        </main>
+        <footer>
+            <p>
+                Styles thanks to
+                <a href="https://github.com/botoxparty/XP.css">XP.css</a>
+                &middot;
+                <a href="https://sentimentalfuturist.net">&lArr; back to sentimentalfuturist.net</a>
+                &middot;
+                <a href="#top" id="bottom">go back to top ⇑</a>
+            </p>
+        </footer>
+        <script data-goatcounter="https://sentimentalfuturist.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    </body>
+</html>

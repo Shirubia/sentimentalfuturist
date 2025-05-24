@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets/img");
   eleventyConfig.addPassthroughCopy("assets/js");
   eleventyConfig.addPassthroughCopy({ "pages/links/img": "assets/img" });
+  eleventyConfig.addPassthroughCopy({ "pages/memes/img": "memes/img" });
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy(".htaccess");
 
@@ -53,7 +54,7 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  // Shuffle links
+  // Shuffle items
   eleventyConfig.addFilter("shuffle", function (arr) {
     return arr.sort(() => Math.random() - 0.5);
   });
