@@ -183,5 +183,45 @@
     "name": "olu.online",
     "url": "https://olu.online/",
     "textOnly": true
+  },
+  {
+    "name": "Cy",
+    "url": "https://corow.net/",
+    "img": "/assets/img/links/corow.png"
+  },
+  {
+    "name": "Moxie",
+    "url": "https://moxiemoshpit.com/",
+    "img": "/assets/img/links/moxie.webp"
+  },
+  {
+    "name": "rmf",
+    "url": "https://baccyflap.com/",
+    "img": "https://baccyflap.com/mus/links/button.gif"
+  },
+  {
+    "name": "Mycorrhiza",
+    "url": "https://mycorrhiza.space/",
+    "img": "/assets/img/links/mycorrhiza.png"
+  },
+  {
+    "name": "Melankorin",
+    "url": "https://melankorin.net/",
+    "img": "https://melankorin.net/assets/img/buttons/button-1.gif"
+  },
+  {
+    "name": "Becki",
+    "url": "https://sakuradreams.neocities.org/",
+    "img": "/assets/img/links/sakuradreams.gif"
+  },
+  {
+    "name": "Arina",
+    "url": "https://macchiato.coffee/",
+    "img": "/assets/img/links/macchiato.png"
+  },
+  {
+    "name": "doqmeat.com",
+    "url": "https://doqmeat.com/",
+    "textOnly": true
   }
 ]
