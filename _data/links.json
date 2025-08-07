@@ -223,5 +223,30 @@
     "name": "Des",
     "url": "https://doqmeat.com/",
     "img": "/assets/img/links/doqmeat.png"
+  },
+  {
+    "name": "Rosemary",
+    "url": "https://hillhouse.neocities.org/",
+    "img": "/assets/img/links/hillhouse.png"
+  },
+  {
+    "name": "coffeeplant",
+    "url": "https://coffeeplant.neocities.org/",
+    "img": "/assets/img/links/coffeeplant.png"
+  },
+  {
+    "name": "Jes",
+    "url": "https://j3s.sh/",
+    "textOnly": true
+  },
+  {
+    "name": "Karithina",
+    "url": "https://4o4.au/",
+    "img": "https://4o4.au/images/buttons/knh-88x31.gif"
+  },
+  {
+    "name": "Clarity Anne",
+    "url": "https://fabled.day/",
+    "img": "/assets/img/links/fabled.gif"
   }
 ]
