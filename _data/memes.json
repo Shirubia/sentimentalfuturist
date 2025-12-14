@@ -1,5 +1,15 @@
 [
   {
+    "category": "spanish funny relatable favorite work",
+    "img": "trabajo.png",
+    "alt": "suéltame, hijo de la gran puta"
+  },
+  {
+    "category": "funny relatable reaction wednesday",
+    "img": "shitshow.jpg",
+    "alt": "an absolute shitshow out there"
+  },
+  {
     "category": "funny relatable",
     "img": "you-smell-good.png",
     "alt": "you smell good..."
@@ -240,7 +250,7 @@
     "alt": "tendré que decir que es bait"
   },
   {
-    "category": "funny",
+    "category": "funny favorite",
     "img": "giveaway.jpg",
     "alt": "HUGE GIVEAWAY!"
   },
