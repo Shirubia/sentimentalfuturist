@@ -28,6 +28,16 @@
                 {% endif %}
                 <button id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle light and dark mode"></button>
             </div>
+            {% if isNowArchive %}
+                <div class="now-archive-notice">
+                    <p>
+                        This
+                        <code>/now</code>
+                        page is archived. To see the latest one, visit
+                        <a href="/now/">/now</a>.
+                    </p>
+                </div>
+            {% endif %}
             {{ content | safe }}
         </main>
         <footer>
@@ -35,8 +45,7 @@
                 <ul class="footer-links">
                     <li>
                         <a href="https://sentimentalfuturist.net">sentimentalfuturist.net</a>: perpetrated in the future
-                                                                                                                in
-                        {{ now | date("yyyy") }}
+                                                        in {{ now | date("yyyy") }}
                     </li>
                     <li>
                         <a href="/colophon">Colophon</a>

@@ -248,5 +248,15 @@
     "name": "Clarity Anne",
     "url": "https://fabled.day/",
     "img": "/assets/img/links/fabled.gif"
+  },
+  {
+    "name": "Online Goddess",
+    "url": "https://onlinegoddess.net/",
+    "textOnly": true
+  },
+  {
+    "name": "Trinity",
+    "url": "https://trinityexe.neocities.org/",
+    "textOnly": true
   }
 ]

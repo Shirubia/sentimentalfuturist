@@ -1,0 +1,20 @@
+{% set archivedNow = collections.nowArchive | sort(false, false, "data.modifiedDate") | reverse %}
+{% if archivedNow.length %}
+    <hr/>
+    <details>
+        <summary>
+            Archived
+            <code>/now</code>
+            pages
+        </summary>
+        <ul>
+            {% for page in archivedNow %}
+                <li>
+                    <a href="{{ page.url }}">
+                        {{ page.fileSlug }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </details>
+{% endif %}

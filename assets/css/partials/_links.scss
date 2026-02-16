@@ -30,20 +30,22 @@ a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after
 
 .text-link {
   box-sizing: border-box;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 88px;
   height: 31px;
-  line-height: 31px;
+  line-height: 0.8;
   text-align: center;
-  border: 1px solid var(--color-text);
   font-size: 0.8rem;
   font-variant: all-petite-caps;
   color: var(--color-love);
+  border: 1px solid var(--color-text);
   background: var(--color-highlight-low);
 
   &:hover {
     color: var(--color-foam);
-    border: 1px solid var(--color-foam);
+    border: 1px solid var(--color-text);
     transition: all 0.5s ease-in-out;
   }
 }
