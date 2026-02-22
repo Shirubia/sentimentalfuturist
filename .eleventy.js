@@ -51,12 +51,19 @@ module.exports = function (eleventyConfig) {
       return date.isValid
         ? date.toFormat(format)
         : `Invalid DateTime: ${value}`;
-    }
+    },
   );
 
   // Shuffle items
   eleventyConfig.addFilter("shuffle", function (arr) {
     return arr.sort(() => Math.random() - 0.5);
+  });
+
+  // Linklog collection
+  eleventyConfig.addCollection("linklog", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("content/linklog/*.md")
+      .sort((a, b) => b.date - a.date);
   });
 
   return {
@@ -67,6 +74,7 @@ module.exports = function (eleventyConfig) {
       // Enable file data such as page.date and page.modifiedTime
       dataTemplateEngine: "njk",
       htmlTemplateEngine: "njk",
+      htmlOutput: true,
       markdownTemplateEngine: "njk",
       templateFormats: ["njk", "html", "md"],
     },

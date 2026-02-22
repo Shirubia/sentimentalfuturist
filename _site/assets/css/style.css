@@ -161,6 +161,65 @@ tbody tr:nth-child(even) {
   background-color: var(--color-highlight-med);
 }
 
+/* --- Minimal Entries --- */
+.linklog-entry.minimal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted var(--color-rose);
+  margin-bottom: 1rem;
+}
+.linklog-entry.minimal .linklog-data {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.linklog-entry.minimal .linklog-data .title {
+  display: flex;
+  align-items: center;
+}
+.linklog-entry.minimal span.permalink-icon {
+  font-size: 0.85rem;
+  margin-right: 0.25rem;
+}
+
+.linklog-entry.minimal .favicon {
+  border: 1px solid var(--color-foam);
+  margin-right: 0.25rem;
+}
+
+.linklog-entry.minimal .via {
+  color: var(--color-subtle);
+  font-size: 0.85em;
+  flex: 1 1 100%;
+}
+
+/* --- Dense Entries --- */
+.linklog-entry.dense {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.linklog-entry.dense header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.linklog-entry.dense .favicon {
+  border-radius: 3px;
+}
+
+.e-content {
+  margin-top: 0.5rem;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
 a {
   text-decoration: none;
   background: linear-gradient(to right, var(--color-love), var(--color-iris));
@@ -299,7 +358,7 @@ textarea:focus {
   border-color: var(--color-foam);
 }
 
-header {
+body > header {
   background-color: rgba(var(--color-highlight-low-rgb), 0.85);
   padding: 0 0 0 10px;
   margin: 0;
@@ -309,7 +368,7 @@ header {
   position: relative;
   max-height: 1.5rem;
 }
-header h1 {
+body > header h1 {
   font-size: 1rem;
   font-weight: 600;
   background: linear-gradient(to right, var(--color-text), var(--color-love));
@@ -319,7 +378,7 @@ header h1 {
   padding: 2px 0;
   margin: 0;
 }
-header h1:after {
+body > header h1:after {
   content: "‒ □ ✕";
   display: inline-block;
   margin-inline-start: 5px;
@@ -329,7 +388,7 @@ header h1:after {
   right: 10px;
 }
 @media only screen and (max-width: 330px) {
-  header h1:after {
+  body > header h1:after {
     content: "";
   }
 }

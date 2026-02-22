@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: Linklog
+permalink: "/linklog/{{ fileSlug }}/"
+---
+
+<nav class="breadcrumbs"><a href="/">Home</a> &#187; <a href="/linklog">Linklog</a> &#187; <a href="{{ page.url }}">{{ title }}</a></nav>
+
+<article
+    class="linklog-entry dense h-entry">
+    <!-- Top bar: favicon + title + date -->
+    <header>
+        <a class="u-bookmark-of" href="{{ externalUrl }}" target="_blank" rel="noopener">
+            <img
+                class="favicon"
+                src="https://www.google.com/s2/favicons?domain={{ externalUrl | url }}"
+                alt="favicon"
+                width="20"
+                height="20">
+                {{- title -}}
+            </a>
+            <time class="dt-published" datetime="{{ date }}">
+                <a href="{{ permalink }}">{{ date | date("yyyy-MM-dd") }}</a>
+            </time>
+        </header>
+        <!-- Optional "via" source -->
+        {% if via %}
+            <p class="via">
+                Found via:
+                <a href="{{ via }}" target="_blank" rel="noopener">{{ via }}</a>
+            </p>
+        {% endif %}
+        <!-- Comment / description / blockquote -->
+        <div class="e-content">
+            {{ content | safe }}
+        </div>
+        <!-- Tags -->
+        {% if tags %}
+            <footer class="tags">
+                {% for tag in tags %}
+                    <span class="tag">#{{ tag }}</span>
+                {% endfor %}
+            </footer>
+        {% endif %}
+    </article>
