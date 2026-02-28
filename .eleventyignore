@@ -1,0 +1,5 @@
+# Ignore non-content, documentation, and root files for Eleventy
+AGENTS.md
+README.md
+LICENSE
+# Add additional files here as needed
