@@ -21,7 +21,7 @@
         </header>
         <main>
             <div class="toolbar">
-                {% if eleventyNavigation and eleventyNavigation.key != "Home" %}
+                {% if eleventyNavigation and eleventyNavigation.key and eleventyNavigation.key is string and eleventyNavigation.key != "Home" %}
                     {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
                     <nav class="breadcrumbs">
                         {%- for crumb in breadcrumbs -%}
