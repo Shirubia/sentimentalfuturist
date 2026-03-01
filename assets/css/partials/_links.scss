@@ -1,30 +1,36 @@
 a {
-  text-decoration: none;
   background: linear-gradient(to right, var(--color-love), var(--color-iris));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  border-block-end: 1px dotted var(--color-love);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--color-iris);
 
   &:hover {
     color: var(--color-foam);
-    border-block-end: 1px dotted var(--color-foam);
+    text-decoration-color: var(--color-foam);
     transition: all 0.5s ease-in-out;
   }
 
   &:has(img) {
     border-block-end: none;
+    text-decoration: none;
 
     &:hover {
       border-block-end: none;
+      text-decoration: none;
     }
   }
 }
 
-a[href^="http://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
-a[href^="https://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
-a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after
-{
+a[href^="http://"]:not([href*="sentimentalfuturist.net"]):not(
+    .image-link
+  ):after,
+a[href^="https://"]:not([href*="sentimentalfuturist.net"]):not(
+    .image-link
+  ):after,
+a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after {
   content: "↗";
 }
 
@@ -56,4 +62,7 @@ a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after
   justify-content: center;
   gap: 0.5rem;
   margin: 2rem 0;
+  a {
+    text-decoration: none;
+  }
 }

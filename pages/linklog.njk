@@ -8,7 +8,7 @@ eleventyNavigation:
   title: "Linklog"
 date: Last Modified
 createdDate: 2026-02-20
-modifiedDate: 2026-02-20
+modifiedDate: 2026-03-01
 ---
 
 <div class="linklog-list">
@@ -16,6 +16,7 @@ modifiedDate: 2026-02-20
         <div class="linklog-entry minimal h-entry">
             <div
                 class="linklog-data">
+                <div class="linklog-header">
                 <!-- Favicon + title -->
                 <div class="title">
                     <img
@@ -27,26 +28,28 @@ modifiedDate: 2026-02-20
                         <a class="u-bookmark-of" href="{{- item.data.externalUrl -}}" target="_blank" rel="noopener">{{- item.data.title -}}
                         </a>
                     </div>
-                    <!-- Date permalink -->
-                    <div class="date">
-                        <a class="dt-published" href="{{ item.url }}" title="Permalink">
-                            <span class="permalink-icon">&#x1F517;</span>
-                            {{- item.date | date("yyyy-MM-dd") -}}
-                        </a>
-                    </div>
-                    <!-- Optional via -->
-                    {% if item.data.via %}
-                        <div class="via">via
-                            <a href="{{ item.data.via }}" target="_blank" rel="noopener">
-                                {{- item.data.via -}}
-                            </a>
-                        </div>
-                    {% endif %}
+                        <!-- Optional via -->
+                        {% if item.data.via %}
+                            <div class="via">via
+                                <a href="{{ item.data.via }}" target="_blank" rel="noopener">
+                                    {{- item.data.via -}}
+                                </a>
+                            </div>
+                        {% endif %}
                 </div>
+                <!-- Date permalink -->
+                <div class="date">
+                    <a class="dt-published" href="{{ item.url }}" title="Permalink">
+                        <span class="permalink-icon">&#x1F517;</span>
+                        {{-  item.date | date("yyyy-MM-dd") -}}
+                    </a>
+                </div>
+                </div>
+
                 <!-- Optional excerpt/comment -->
                 {% if item.templateContent %}
                     <div class="e-content">{{ item.templateContent | safe }}</div>
                 {% endif %}
             </div>
         {% endfor %}
-    </div>
+</div>

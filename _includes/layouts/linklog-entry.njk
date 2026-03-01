@@ -8,36 +8,37 @@ permalink: "/linklog/{{ fileSlug }}/"
     class="linklog-entry dense h-entry">
     <!-- Top bar: favicon + title + date -->
     <header>
-        <a class="u-bookmark-of" href="{{ externalUrl }}" target="_blank" rel="noopener">
-            <img
-                class="favicon"
-                src="https://www.google.com/s2/favicons?domain={{ externalUrl | url }}"
-                alt="favicon"
-                width="20"
-                height="20">
+        <h3 class="title">
+            <a class="u-bookmark-of" href="{{ externalUrl }}" target="_blank" rel="noopener">
+                <img
+                    class="favicon"
+                    src="https://www.google.com/s2/favicons?domain={{ externalUrl | url }}"
+                    alt="favicon"
+                    width="20"
+                    height="20"/>
                 {{- title -}}
             </a>
-            <time class="dt-published" datetime="{{ date }}">
-                <a href="{{ permalink }}">{{ date | date("yyyy-MM-dd") }}</a>
+        </h3>
+        <div class="date-added">Added on <time class="dt-published" datetime="{{ date }}">
+                {{ date | dateWithSuffix }}
             </time>
-        </header>
+        </div>
         <!-- Optional "via" source -->
         {% if via %}
-            <p class="via">
-                Found via:
-                <a href="{{ via }}" target="_blank" rel="noopener">{{ via }}</a>
-            </p>
+            <div class="via">
+                        Found via
+                        <a href="{{ via }}" target="_blank" rel="noopener">
+                    <img
+                    class="favicon"
+                    src="https://www.google.com/s2/favicons?domain={{ via | url }}"
+                    alt="favicon"
+                    width="16"
+                    height="16"/>{{ via }}</a>
+            </div>
         {% endif %}
-        <!-- Comment / description / blockquote -->
-        <div class="e-content">
-            {{ content | safe }}
-        </div>
-        <!-- Tags -->
-        {% if tags %}
-            <footer class="tags">
-                {% for tag in tags %}
-                    <span class="tag">#{{ tag }}</span>
-                {% endfor %}
-            </footer>
-        {% endif %}
-    </article>
+    </header>
+    <!-- Comment / description / blockquote -->
+    <div class="e-content">
+        {{ content | safe }}
+    </div>
+</article>
