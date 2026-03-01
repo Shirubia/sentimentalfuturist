@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+title: Linklog
+permalink: "/linklog/{{ fileSlug }}/"
+---
+
+<article
+    class="linklog-entry dense h-entry">
+    <!-- Top bar: favicon + title + date -->
+    <header>
+        <h3 class="title">
+            <a class="u-bookmark-of" href="{{ externalUrl }}" target="_blank" rel="noopener">
+                <img
+                    class="favicon"
+                    src="https://www.google.com/s2/favicons?domain={{ externalUrl | url }}"
+                    alt="favicon"
+                    width="20"
+                    height="20"/>
+                {{- title -}}
+            </a>
+        </h3>
+        <div class="date-added">Added on <time class="dt-published" datetime="{{ date }}">
+                {{ date | dateWithSuffix }}
+            </time>
+        </div>
+        <!-- Optional "via" source -->
+        {% if via %}
+            <div class="via">
+                        Found via
+                        <a href="{{ via }}" target="_blank" rel="noopener">
+                    <img
+                    class="favicon"
+                    src="https://www.google.com/s2/favicons?domain={{ via | url }}"
+                    alt="favicon"
+                    width="16"
+                    height="16"/>{{ via }}</a>
+            </div>
+        {% endif %}
+    </header>
+    <!-- Comment / description / blockquote -->
+    <div class="e-content">
+        {{ content | safe }}
+    </div>
+</article>

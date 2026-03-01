@@ -161,24 +161,117 @@ tbody tr:nth-child(even) {
   background-color: var(--color-highlight-med);
 }
 
+/* --- Minimal Entries --- */
+.linklog-entry.minimal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted var(--color-rose);
+  margin-bottom: 1rem;
+}
+.linklog-entry.minimal .linklog-data {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.linklog-entry.minimal .linklog-data .linklog-header {
+  display: flex;
+  flex: 0 1 400px;
+  flex-direction: column;
+  gap: 5px;
+}
+.linklog-entry.minimal .linklog-data .title {
+  display: flex;
+  align-items: center;
+}
+.linklog-entry.minimal span.permalink-icon {
+  font-size: 0.85rem;
+  margin-right: 0.25rem;
+}
+
+.linklog-entry.minimal .favicon {
+  border: 1px solid var(--color-foam);
+  margin-right: 0.25rem;
+}
+
+.linklog-entry.minimal .via {
+  color: var(--color-subtle);
+  font-size: 0.85em;
+  flex: 1 1 100%;
+}
+
+/* --- Dense Entries --- */
+.linklog-entry.dense {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.linklog-entry.dense .via,
+.linklog-entry.dense .date-added,
+.linklog-entry.dense time {
+  color: var(--color-subtle);
+  font-size: 0.9rem;
+}
+.linklog-entry.dense .via {
+  display: flex;
+}
+.linklog-entry.dense .via a {
+  margin-left: 5px;
+  display: flex;
+  align-items: anchor-center;
+}
+
+.linklog-entry.dense header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted var(--color-iris);
+}
+.linklog-entry.dense header h3 {
+  margin-block: 0;
+}
+.linklog-entry.dense header h3 a {
+  display: flex;
+  align-items: anchor-center;
+}
+
+.linklog-entry.dense .favicon {
+  border: 1px solid var(--color-foam);
+  margin-right: 0.25rem;
+}
+
+.e-content {
+  margin-top: 0.5rem;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
 a {
-  text-decoration: none;
   background: linear-gradient(to right, var(--color-love), var(--color-iris));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  border-block-end: 1px dotted var(--color-love);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--color-iris);
 }
 a:hover {
   color: var(--color-foam);
-  border-block-end: 1px dotted var(--color-foam);
+  text-decoration-color: var(--color-foam);
   transition: all 0.5s ease-in-out;
 }
 a:has(img) {
   border-block-end: none;
+  text-decoration: none;
 }
 a:has(img):hover {
   border-block-end: none;
+  text-decoration: none;
 }
 
 a[href^="http://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
@@ -214,6 +307,9 @@ a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after {
   justify-content: center;
   gap: 0.5rem;
   margin: 2rem 0;
+}
+.link-grid a {
+  text-decoration: none;
 }
 
 button,
@@ -299,7 +395,7 @@ textarea:focus {
   border-color: var(--color-foam);
 }
 
-header {
+body > header {
   background-color: rgba(var(--color-highlight-low-rgb), 0.85);
   padding: 0 0 0 10px;
   margin: 0;
@@ -309,7 +405,7 @@ header {
   position: relative;
   max-height: 1.5rem;
 }
-header h1 {
+body > header h1 {
   font-size: 1rem;
   font-weight: 600;
   background: linear-gradient(to right, var(--color-text), var(--color-love));
@@ -319,7 +415,7 @@ header h1 {
   padding: 2px 0;
   margin: 0;
 }
-header h1:after {
+body > header h1:after {
   content: "‒ □ ✕";
   display: inline-block;
   margin-inline-start: 5px;
@@ -329,7 +425,7 @@ header h1:after {
   right: 10px;
 }
 @media only screen and (max-width: 330px) {
-  header h1:after {
+  body > header h1:after {
     content: "";
   }
 }
@@ -481,8 +577,7 @@ li.completed::marker {
 .toolbar {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 @media only screen and (max-width: 400px) {
   .toolbar {

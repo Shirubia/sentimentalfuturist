@@ -3,7 +3,10 @@ layout: layouts/base.njk
 title: Home
 date: Last Modified
 createdDate: 2025-04-20
-modifiedDate: 2026-02-17
+modifiedDate: 2026-03-01
+eleventyNavigation:
+  key: "Home"
+  title: "Home"
 ---
 
 <blockquote id="tagline" class="hidden"></blockquote>
@@ -46,13 +49,18 @@ modifiedDate: 2026-02-17
     <li>
       <a href="https://thoughts.sentimentalfuturist.net/">thoughts</a>: a microblog of sorts</li>
   </ul>
-  <h3>Art, media & interests</h3>
-  <ul>
+  <h3>Curated collections</h3>
+  <ul class="two-column">
     <li>
-      <a href="art">art</a>: an archive of some of my doodles
-    </li>
+      <a href="linklog">linklog</a>: my link dump, where I collect interesting links</li>
     <li>
       <a href="memes">memes</a>: my collection of memes and other silly images
+    </li>
+  </ul>
+  <h3>Art, media & interests</h3>
+  <ul class="two-column">
+    <li>
+      <a href="art">art</a>: an archive of some of my doodles
     </li>
     <li>
       <a href="https://fan.sentimentalfuturist.net">fan</a>: fanlistings I've joined</li>
@@ -89,6 +97,10 @@ modifiedDate: 2026-02-17
       <a href="https://webri.ng/webring/ladiesofthelinks/random?via=https%3A%2F%2Fsentimentalfuturist.net/">???</a>&nbsp;
       <a href="https://webri.ng/webring/ladiesofthelinks/next?via=https%3A%2F%2Fsentimentalfuturist.net/">&raquo;</a>
     </p>
+    <div id='euroring'>
+      <script type="text/javascript" src="https://euroring.neocities.org/scripts/onionring-variables.js"></script>
+      <script type="text/javascript" src="https://euroring.neocities.org/scripts/minimal.js"></script>
+    </div>
     <p>
       <a href="https://kalechips.net/responsive/" class="image-link">
         <img src="/assets/img/joined/responsive-directory.png" alt="Responsive Web Directory" title="Responsive Web Directory"/>

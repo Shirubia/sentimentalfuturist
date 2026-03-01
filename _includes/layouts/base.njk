@@ -21,9 +21,14 @@
         </header>
         <main>
             <div class="toolbar">
-                {% if breadcrumb %}
+                {% if eleventyNavigation and eleventyNavigation.key and eleventyNavigation.key is string and eleventyNavigation.key != "Home" %}
+                    {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
                     <nav class="breadcrumbs">
-                        {{ breadcrumb | safe }}
+                        {%- for crumb in breadcrumbs -%}
+                            <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+                            {%- if not loop.last -%}&nbsp;&#187;
+                            {% endif -%}
+                        {%- endfor -%}
                     </nav>
                 {% endif %}
                 <button id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle light and dark mode"></button>
@@ -45,7 +50,7 @@
                 <ul class="footer-links">
                     <li>
                         <a href="https://sentimentalfuturist.net">sentimentalfuturist.net</a>: perpetrated in the future
-                                                        in {{ now | date("yyyy") }}
+                                                                                    in {{ now | date("yyyy") }}
                     </li>
                     <li>
                         <a href="/colophon">Colophon</a>

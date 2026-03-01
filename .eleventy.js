@@ -1,7 +1,10 @@
 const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("assets/img");
   eleventyConfig.addPassthroughCopy("assets/js");
   eleventyConfig.addPassthroughCopy({ "pages/links/img": "assets/img" });
@@ -51,12 +54,42 @@ module.exports = function (eleventyConfig) {
       return date.isValid
         ? date.toFormat(format)
         : `Invalid DateTime: ${value}`;
-    }
+    },
   );
 
-  // Shuffle items
+  // New: filter for ordinal day, month, year
+  eleventyConfig.addFilter("dateWithSuffix", (value) => {
+    let date = value instanceof Date
+      ? DateTime.fromJSDate(value)
+      : typeof value === "string"
+        ? DateTime.fromISO(value)
+        : DateTime.fromMillis(value);
+    if (!date.isValid) return "Invalid date";
+    const day = date.day;
+    const month = date.toFormat("LLLL");
+    const year = date.year;
+    // Ordinal logic
+    const getOrdinal = (d) => {
+      if (d > 3 && d < 21) return "th";
+      switch (d % 10) {
+        case 1: return "st";
+        case 2: return "nd";
+        case 3: return "rd";
+        default: return "th";
+      }
+    };
+    return `${day}${getOrdinal(day)} ${month} ${year}`;
+  });
+
   eleventyConfig.addFilter("shuffle", function (arr) {
     return arr.sort(() => Math.random() - 0.5);
+  });
+
+  // Linklog collection
+  eleventyConfig.addCollection("linklog", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("content/linklog/*.md")
+      .sort((a, b) => b.date - a.date);
   });
 
   return {
@@ -67,6 +100,7 @@ module.exports = function (eleventyConfig) {
       // Enable file data such as page.date and page.modifiedTime
       dataTemplateEngine: "njk",
       htmlTemplateEngine: "njk",
+      htmlOutput: true,
       markdownTemplateEngine: "njk",
       templateFormats: ["njk", "html", "md"],
     },
