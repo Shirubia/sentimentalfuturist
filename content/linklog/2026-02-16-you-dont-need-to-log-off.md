@@ -1,11 +1,11 @@
 ---
-title: You Dont Need to Log off, You Need to Become Sensual
+title: You Don't Need to Log off, You Need to Become Sensual
 externalUrl: https://houseofmirrors.substack.com/p/you-dont-need-to-log-off-you-need
 date: 2026-02-16
 layout: layouts/linklog-entry.njk
 permalink: "/linklog/{{ page.fileSlug }}/"
 eleventyNavigation:
-  key: "You Dont Need to Log off, You Need to Become Sensual"
+  key: "You Don't Need to Log off, You Need to Become Sensual"
   parent: Linklog
 ---
 
