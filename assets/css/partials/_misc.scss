@@ -160,7 +160,7 @@ li {
   text-align: center;
   margin: 2rem 0;
 
-  div {
+  > div {
     margin: 1.5rem 0;
 
     &.sprites {
@@ -213,6 +213,14 @@ nav.breadcrumbs {
   justify-content: center;
   align-items: center;
   margin-block-end: 1.5rem;
+
+  .widgetbox {
+    height: auto;
+  }
+
+  a::after {
+    content: "";
+  }
 }
 
 // Safont webring
