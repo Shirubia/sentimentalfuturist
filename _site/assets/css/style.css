@@ -626,10 +626,10 @@ li.completed::marker {
   text-align: center;
   margin: 2rem 0;
 }
-.joined p {
+.joined div {
   margin: 1.5rem 0;
 }
-.joined p.sprites {
+.joined div.sprites {
   margin-top: 1.5rem;
 }
 
