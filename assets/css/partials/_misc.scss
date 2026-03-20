@@ -207,6 +207,14 @@ nav.breadcrumbs {
   display: none;
 }
 
+// Euroring webring
+#euroring {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 1.5rem;
+}
+
 // Safont webring
 :root {
   --g1v5x3-background-color: transparent !important;

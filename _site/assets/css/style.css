@@ -670,6 +670,13 @@ nav.breadcrumbs {
   display: none;
 }
 
+#euroring {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 1.5rem;
+}
+
 :root {
   --g1v5x3-background-color: transparent !important;
   --g1v5x3-width: 100% !important;
