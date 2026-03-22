@@ -50,5 +50,9 @@ module.exports = () => {
       date: DateTime.fromISO("2026-03-01"),
       text: '<p>Did some refactoring, and added a <a href="/linklog">linklog</a> to collect interesting links there.</p>',
     },
+    {
+      date: DateTime.fromISO("2026-03-22"),
+      text: '<p>Added a silly thing to the <a href="/memes">meme gallery</a>, and updated some styles around the joined/webrings section and the <a href="/linklog">linklog</a>.</p>',
+    },
   ].sort((a, b) => b.date - a.date);
 };
