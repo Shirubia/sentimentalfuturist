@@ -18,12 +18,12 @@
       display: flex;
       flex: 0 1 400px;
       flex-direction: column;
-      gap: 5px;
+      gap: 8px;
     }
 
     .title {
       display: flex;
-      align-items: center;
+      align-items: first baseline;
     }
   }
 
@@ -34,8 +34,14 @@
 }
 
 .linklog-entry.minimal .favicon {
-  border: 1px solid var(--color-foam);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-right: 0.25rem;
+  vertical-align: middle;
 }
 
 .linklog-entry.minimal .via {
@@ -61,8 +67,8 @@
 
     a {
       margin-left: 5px;
-      display: flex;
-      align-items: anchor-center;
+      display: inline-block;
+      vertical-align: middle;
     }
   }
 }
@@ -71,24 +77,30 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
+  gap: 8px;
   margin-bottom: 1.5rem;
   padding-bottom: 10px;
   border-bottom: 1px dotted var(--color-iris);
 
   h3 {
     margin-block: 0;
+  }
 
-    a {
-      display: flex;
-      align-items: anchor-center;
-    }
+  a {
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
 .linklog-entry.dense .favicon {
-  border: 1px solid var(--color-foam);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-right: 0.25rem;
+  vertical-align: middle;
 }
 
 .e-content {

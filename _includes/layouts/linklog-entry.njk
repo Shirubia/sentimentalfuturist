@@ -10,12 +10,10 @@ permalink: "/linklog/{{ fileSlug }}/"
     <header>
         <h3 class="title">
             <a class="u-bookmark-of" href="{{ externalUrl }}" target="_blank" rel="noopener">
-                <img
+                <span
                     class="favicon"
-                    src="https://www.google.com/s2/favicons?domain={{ externalUrl | url }}"
-                    alt="favicon"
-                    width="20"
-                    height="20"/>
+                    style="background-image: url('https://www.google.com/s2/favicons?domain={{ externalUrl | url }}');"
+                    aria-hidden="true"></span>
                 {{- title -}}
             </a>
         </h3>
@@ -28,12 +26,10 @@ permalink: "/linklog/{{ fileSlug }}/"
             <div class="via">
                         Found via
                         <a href="{{ via }}" target="_blank" rel="noopener">
-                    <img
+                    <span
                     class="favicon"
-                    src="https://www.google.com/s2/favicons?domain={{ via | url }}"
-                    alt="favicon"
-                    width="16"
-                    height="16"/>{{ via }}</a>
+                    style="background-image: url('https://www.google.com/s2/favicons?domain={{ via | url }}');"
+                    aria-hidden="true"></span>{{ via }}</a>
             </div>
         {% endif %}
     </header>

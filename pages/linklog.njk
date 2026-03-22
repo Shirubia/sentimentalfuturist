@@ -19,15 +19,14 @@ modifiedDate: 2026-03-01
                 <div class="linklog-header">
                 <!-- Favicon + title -->
                 <div class="title">
-                    <img
-                        class="favicon"
-                        src="https://www.google.com/s2/favicons?domain={{ item.data.externalUrl | url }}"
-                        alt="favicon"
-                        width="16"
-                        height="16">
-                        <a class="u-bookmark-of" href="{{- item.data.externalUrl -}}" target="_blank" rel="noopener">{{- item.data.title -}}
-                        </a>
-                    </div>
+                    <a class="u-bookmark-of" href="{{- item.data.externalUrl -}}" target="_blank" rel="noopener">
+                        <span
+                            class="favicon"
+                            style="background-image: url('https://www.google.com/s2/favicons?domain={{ item.data.externalUrl | url }}');"
+                            aria-hidden="true"></span>
+                        {{- item.data.title -}}
+                    </a>
+                </div>
                         <!-- Optional via -->
                         {% if item.data.via %}
                             <div class="via">via
