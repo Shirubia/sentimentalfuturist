@@ -85,6 +85,16 @@ module.exports = function (eleventyConfig) {
     return arr.sort(() => Math.random() - 0.5);
   });
 
+  eleventyConfig.addFilter("hostname", (value) => {
+    if (!value || typeof value !== "string") return "";
+    try {
+      return new URL(value).hostname;
+    } catch (err) {
+      // If value isn’t a full URL, fall back to returning the raw string.
+      return value;
+    }
+  });
+
   // Linklog collection
   eleventyConfig.addCollection("linklog", function (collectionApi) {
     return collectionApi

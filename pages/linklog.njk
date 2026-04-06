@@ -20,10 +20,15 @@ modifiedDate: 2026-03-01
                 <!-- Favicon + title -->
                 <div class="title">
                     <a class="u-bookmark-of" href="{{- item.data.externalUrl -}}" target="_blank" rel="noopener">
-                        <span
-                            class="favicon"
-                            style="background-image: url('https://www.google.com/s2/favicons?domain={{ item.data.externalUrl | url }}');"
-                            aria-hidden="true"></span>
+                        <img
+                            class="favicon favicon-fallback"
+                            data-favicon-host="{{ item.data.externalUrl | hostname | url }}"
+                            src="https://favicone.com/{{ item.data.externalUrl | hostname | url }}?s=16"
+                            onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain={{ item.data.externalUrl | hostname | url }}';"
+                            width="16"
+                            height="16"
+                            aria-hidden="true"
+                            alt="" />
                         {{- item.data.title -}}
                     </a>
                 </div>

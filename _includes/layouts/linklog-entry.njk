@@ -10,10 +10,15 @@ permalink: "/linklog/{{ fileSlug }}/"
     <header>
         <h3 class="title">
             <a class="u-bookmark-of" href="{{ externalUrl }}" target="_blank" rel="noopener">
-                <span
-                    class="favicon"
-                    style="background-image: url('https://www.google.com/s2/favicons?domain={{ externalUrl | url }}');"
-                    aria-hidden="true"></span>
+                <img
+                    class="favicon favicon-fallback"
+                    data-favicon-host="{{ externalUrl | hostname | url }}"
+                    src="https://favicone.com/{{ externalUrl | hostname | url }}?s=16"
+                    onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain={{ externalUrl | hostname | url }}';"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                    alt="" />
                 {{- title -}}
             </a>
         </h3>
@@ -26,10 +31,15 @@ permalink: "/linklog/{{ fileSlug }}/"
             <div class="via">
                         Found via
                         <a href="{{ via }}" target="_blank" rel="noopener">
-                    <span
-                    class="favicon"
-                    style="background-image: url('https://www.google.com/s2/favicons?domain={{ via | url }}');"
-                    aria-hidden="true"></span>{{ via }}</a>
+                    <img
+                    class="favicon favicon-fallback"
+                    data-favicon-host="{{ via | hostname | url }}"
+                    src="https://favicone.com/{{ via | hostname | url }}?s=16"
+                    onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain={{ via | hostname | url }}';"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                    alt="" />{{ via }}</a>
             </div>
         {% endif %}
     </header>
