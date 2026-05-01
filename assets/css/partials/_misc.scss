@@ -79,13 +79,16 @@ li {
   }
 
   &.completed {
-    color: var(--color-muted);
-    text-decoration: line-through;
-
     &::marker {
       content: "☑ ";
       font-weight: bold;
       font-size: 1.2rem;
+      color: var(--color-muted);
+    }
+
+    > .label {
+      color: var(--color-muted);
+      text-decoration: line-through;
     }
   }
 }

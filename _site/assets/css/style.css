@@ -567,14 +567,15 @@ li::marker {
   font-weight: bold;
   font-size: 1.2rem;
 }
-li.completed {
-  color: var(--color-muted);
-  text-decoration: line-through;
-}
 li.completed::marker {
   content: "☑ ";
   font-weight: bold;
   font-size: 1.2rem;
+  color: var(--color-muted);
+}
+li.completed > .label {
+  color: var(--color-muted);
+  text-decoration: line-through;
 }
 
 ::selection {
