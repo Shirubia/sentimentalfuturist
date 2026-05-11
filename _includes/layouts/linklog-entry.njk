@@ -11,10 +11,8 @@ permalink: "/linklog/{{ fileSlug }}/"
         <h3 class="title">
             <a class="u-bookmark-of" href="{{ externalUrl }}" target="_blank" rel="noopener">
                 <img
-                    class="favicon favicon-fallback"
-                    data-favicon-host="{{ externalUrl | hostname | url }}"
-                    src="https://favicone.com/{{ externalUrl | hostname | url }}?s=16"
-                    onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain={{ externalUrl | hostname | url }}';"
+                    class="favicon"
+                    src="https://icons.duckduckgo.com/ip3/{{ externalUrl | hostname | url }}.ico"
                     width="16"
                     height="16"
                     aria-hidden="true"
@@ -32,10 +30,8 @@ permalink: "/linklog/{{ fileSlug }}/"
                         Found via
                         <a href="{{ via }}" target="_blank" rel="noopener">
                     <img
-                    class="favicon favicon-fallback"
-                    data-favicon-host="{{ via | hostname | url }}"
-                    src="https://favicone.com/{{ via | hostname | url }}?s=16"
-                    onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain={{ via | hostname | url }}';"
+                    class="favicon"
+                    src="https://icons.duckduckgo.com/ip3/{{ via | hostname | url }}.ico"
                     width="16"
                     height="16"
                     aria-hidden="true"

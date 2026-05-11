@@ -30,7 +30,7 @@ function setTheme(theme) {
   const toggleButton = document.getElementById("theme-toggle");
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
-  toggleButton.textContent = theme === "dark" ? "🌝" :"🌚" ;
+  toggleButton.textContent = theme === "dark" ? "🌝" : "🌚";
 }
 
 function toggleTheme() {
@@ -49,68 +49,10 @@ function initTheme() {
   } else {
     // no saved preference = follow system preference
     const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
+      "(prefers-color-scheme: dark)",
     ).matches;
     setTheme(prefersDark ? "dark" : "light");
   }
-}
-
-function getFaviconCandidates(host) {
-  return [
-    `https://favicone.com/${host}?s=32`,
-    `https://favicone.com/${host}?s=16`,
-    `https://icons.duckduckgo.com/ip3/${host}.ico`,
-    `https://www.google.com/s2/favicons?domain=${host}`,
-  ];
-}
-
-function tryFaviconFallback(img) {
-  const host = img.dataset.faviconHost;
-  if (!host) return;
-
-  const candidates = getFaviconCandidates(host);
-  let index = 0;
-
-  function cleanup() {
-    img.removeEventListener("load", handleLoad);
-    img.removeEventListener("error", handleError);
-  }
-
-  function setNextSrc() {
-    if (index >= candidates.length) {
-      cleanup();
-      return;
-    }
-    img.src = candidates[index++];
-  }
-
-  function handleLoad() {
-    if (img.naturalWidth === 0 || img.naturalHeight === 0) {
-      setNextSrc();
-    } else {
-      cleanup();
-    }
-  }
-
-  function handleError() {
-    setNextSrc();
-  }
-
-  img.addEventListener("load", handleLoad);
-  img.addEventListener("error", handleError);
-
-  // If the image has already finished loading (cache or early load), evaluate it immediately.
-  if (img.complete) {
-    handleLoad();
-  } else {
-    setNextSrc();
-  }
-}
-
-function initFaviconFallbacks() {
-  document.querySelectorAll("img.favicon-fallback").forEach((img) => {
-    tryFaviconFallback(img);
-  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -120,6 +62,4 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toggleButton) {
     toggleButton.addEventListener("click", toggleTheme);
   }
-
-  initFaviconFallbacks();
 });

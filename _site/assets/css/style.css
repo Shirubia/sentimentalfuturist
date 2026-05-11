@@ -192,7 +192,8 @@ tbody tr:nth-child(even) {
   margin-right: 0.25rem;
 }
 
-.linklog-entry.minimal .favicon {
+/* Generic favicon styling used for linklist entries */
+.favicon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -246,17 +247,7 @@ tbody tr:nth-child(even) {
   vertical-align: middle;
 }
 
-.linklog-entry.dense .favicon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 0.25rem;
-  vertical-align: middle;
-}
-
+/* (Consolidated into .favicon above) */
 .e-content {
   margin-top: 0.5rem;
   font-size: 0.95em;
