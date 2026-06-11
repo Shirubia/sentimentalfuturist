@@ -268,14 +268,6 @@ a:hover {
   text-decoration-color: var(--color-foam);
   transition: all 0.5s ease-in-out;
 }
-a:has(img) {
-  border-block-end: none;
-  text-decoration: none;
-}
-a:has(img):hover {
-  border-block-end: none;
-  text-decoration: none;
-}
 
 a[href^="http://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
 a[href^="https://"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after,
@@ -312,6 +304,14 @@ a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after {
   margin: 2rem 0;
 }
 .link-grid a {
+  text-decoration: none;
+}
+.link-grid a:has(img) {
+  border-block-end: none;
+  text-decoration: none;
+}
+.link-grid a:has(img):hover {
+  border-block-end: none;
   text-decoration: none;
 }
 

@@ -12,16 +12,6 @@ a {
     text-decoration-color: var(--color-foam);
     transition: all 0.5s ease-in-out;
   }
-
-  &:has(img) {
-    border-block-end: none;
-    text-decoration: none;
-
-    &:hover {
-      border-block-end: none;
-      text-decoration: none;
-    }
-  }
 }
 
 a[href^="http://"]:not([href*="sentimentalfuturist.net"]):not(
@@ -64,5 +54,15 @@ a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after {
   margin: 2rem 0;
   a {
     text-decoration: none;
+
+    &:has(img) {
+      border-block-end: none;
+      text-decoration: none;
+
+      &:hover {
+        border-block-end: none;
+        text-decoration: none;
+      }
+    }
   }
 }
