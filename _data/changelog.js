@@ -58,5 +58,9 @@ module.exports = () => {
       date: DateTime.fromISO("2026-05-01"),
       text: '<p>Boring, but necessary update: Added a long-due <a href="/privacy">privacy policy</a> page.</p>',
     },
+    {
+      date: DateTime.fromISO("2026-09-19"),
+      text: '<p>Hey! I haven\'t forgotten about this place, I swear; it\'s just that the Real World™ keeps me busy (but... in a good way, I guess? Can\'t complain).</p><p>Today, in total goblin mode (I love September, SUMMER IS FINALLY ENDING), I\'ve set aside some time to tend to this <s>salad</s> garden:</p><ul><li>Updated the <a href="/now">now</a> page to confirm I\'m still alive.</li><li>Added a bunch of stuff to the good old <a href="/memes">memes</a> page.</li><li>Dusted the <a href="/wish">wishlist</a>; seems that my interest in videogames is making a comeback.</li><li>Updated the <a href="/links">links</a> page with a couple of new links.</li><li>I\'ve been managing to keep the <a href="/linklog">linklog</a> alive. Kind of. And, of course, the <a href="https://thoughts.sentimentalfuturist.net/">thoughts</a> page (but that one is easy to update).</li></ul><p>That\'s it for now. I\'ve actually been working on a new section for the website but, as always, I\'m terribly slow, so... I will finish someday ☺</p>',
+    },
   ].sort((a, b) => b.date - a.date);
 };

@@ -1,5 +1,105 @@
 [
   {
+    "category": "funny relatable gpoy",
+    "img": "clean-glasses.jpg",
+    "alt": "keeping my fucking glasses clean"
+  },
+  {
+    "category": "funny anime ranma text",
+    "img": "ranma.jpg",
+    "alt": "men ain't shit!"
+  },
+  {
+    "category": "funny relatable reaction",
+    "img": "bullshit.jpg",
+    "alt": "why is everithing bullshit tho?"
+  },
+  {
+    "category": "society funny philosophy fascism",
+    "img": "western-descent-towards-fascism.jpg",
+    "alt": "western descent towards fascism"
+  },
+  {
+    "category": "wholesome text",
+    "img": "i-hope-this-email-never-finds-you.jpg",
+    "alt": "I hope this email never finds you."
+  },
+  {
+    "category": "funny ads",
+    "img": "hot-wizards.jpg",
+    "alt": "hot wizards in your area"
+  },
+  {
+    "category": "funny relatable text anime gpoy",
+    "img": "anime-drugs.jpg",
+    "alt": "peer pressure"
+  },
+  {
+    "category": "funny relatable gpoy reaction",
+    "img": "are-you-okay.jpg",
+    "alt": "are you okay? absolutely not but at least i'm funny"
+  },
+  {
+    "category": "wholesome davidlynch",
+    "img": "david-lynch-future.jpg",
+    "alt": "the future is looking very bright"
+  },
+  {
+    "category": "gpoy relatable",
+    "img": "returning-to-my-hole.jpg",
+    "alt": "returning to my hole after one single errand"
+  },
+  {
+    "category": "funny text",
+    "img": "speechless.jpg",
+    "alt": "speechless ??"
+  },
+  {
+    "category": "funny relatable gpoy reaction",
+    "img": "wtf-did-i-come-in-here-for.jpg",
+    "alt": "wtf did i come in here for"
+  },
+  {
+    "category": "funny text",
+    "img": "stress-free-zone.jpg",
+    "alt": "you are now entering a stress free zone"
+  },
+  {
+    "category": "funny relatable books gpoy",
+    "img": "unwell.jpg",
+    "alt": "-you seem unwell -i finished a book -ah, say no more"
+  },
+  {
+    "category": "funny relatable motivational wholesome text",
+    "img": "shes-weird.jpg",
+    "alt": "she's weird"
+  },
+  {
+    "category": "funny magic",
+    "img": "non-magic-missile.jpg",
+    "alt": "I cast non-magic missile"
+  },
+  {
+    "category": "funny pokemon",
+    "img": "kyogre-river.jpg",
+    "alt": "kyogre is behind this"
+  },
+  {
+    "category": "funny relatable matrix gpoy text society",
+    "img": "born-too-late.jpg",
+    "alt": "born too late to own property, born too soon to be a teen tik tok star"
+  },
+  {
+    "category": "funny reaction",
+    "img": "weird-but-not-a-sin.jpg",
+    "alt": "once again, weird, but not a sin."
+  },
+  {
+    "category": "funny gpoy relatable wholesome",
+    "img": "air-conditioning.jpg",
+    "alt": "air conditioning and me"
+  },
+  {
     "category": "funny spanish",
     "img": "colgate.png",
     "alt": "colgate de esta"
@@ -555,7 +655,7 @@
     "alt": "chocu"
   },
   {
-    "category": "favorite reaction",
+    "category": "favorite reaction davidlynch",
     "img": "david_lynch_elaborate.jpg",
     "alt": "Elaborate on that"
   },

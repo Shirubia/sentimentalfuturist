@@ -13,6 +13,8 @@ function displayRandomTagline() {
     "come for the content, stay for the self-deprecating humor",
     "beam me up, 'cause i can't breathe 🛸🎶",
     "\"getting old isn't a curse, it's an achievement\" &mdash;a philosopher",
+    "god bless ibuprofen and air conditioning",
+    "<b>I hope you win the war you tell no one about</b>"
   ];
 
   const taglineElement = document.getElementById("tagline");

@@ -258,5 +258,20 @@
     "name": "Trinity",
     "url": "https://trinityexe.neocities.org/",
     "textOnly": true
+  },
+  {
+    "name": "small cypress",
+    "url": "https://smallcypress.neocities.org/",
+    "img": "https://smallcypress.neocities.org/images/smallcypress.png"
+  },
+  {
+    "name": "Syl",
+    "url": "https://syls.blog/",
+    "img": "/assets/img/links/syl.gif"
+  },
+  {
+    "name": "Folkmoss",
+    "url": "https://folkmoss.bearblog.dev/",
+    "textOnly": true
   }
 ]
