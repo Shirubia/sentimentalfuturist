@@ -81,12 +81,10 @@ dl {
   border: 1px dotted var(--color-iris);
   padding: 1rem;
 }
-
 dl dt {
   font-weight: bold;
   color: var(--color-love);
 }
-
 dl dd + dt {
   margin-block-start: 1rem;
 }
@@ -136,14 +134,12 @@ table {
   width: 100%;
   max-width: 600px;
 }
-
 table td,
 table th {
   text-align: right;
   vertical-align: middle;
   padding: 1em;
 }
-
 table td + td,
 table th + td {
   text-align: left;
@@ -178,7 +174,6 @@ tbody tr:nth-child(even) {
   border-bottom: 1px dotted var(--color-rose);
   margin-bottom: 1rem;
 }
-
 .linklog-entry.minimal .linklog-data {
   display: flex;
   align-items: flex-start;
@@ -186,19 +181,16 @@ tbody tr:nth-child(even) {
   gap: 10px;
   flex-wrap: wrap;
 }
-
 .linklog-entry.minimal .linklog-data .linklog-header {
   display: flex;
   flex: 0 1 400px;
   flex-direction: column;
   gap: 8px;
 }
-
 .linklog-entry.minimal .linklog-data .title {
   display: flex;
   align-items: first baseline;
 }
-
 .linklog-entry.minimal span.permalink-icon {
   font-size: 0.85rem;
   margin-right: 0.25rem;
@@ -227,18 +219,15 @@ tbody tr:nth-child(even) {
   padding: 1rem;
   margin-bottom: 1rem;
 }
-
 .linklog-entry.dense .via,
 .linklog-entry.dense .date-added,
 .linklog-entry.dense time {
   color: var(--color-subtle);
   font-size: 0.9rem;
 }
-
 .linklog-entry.dense .via {
   display: flex;
 }
-
 .linklog-entry.dense .via a {
   margin-left: 5px;
   display: inline-block;
@@ -255,11 +244,9 @@ tbody tr:nth-child(even) {
   padding-bottom: 10px;
   border-bottom: 1px dotted var(--color-iris);
 }
-
 .linklog-entry.dense header h3 {
   margin-block: 0;
 }
-
 .linklog-entry.dense header a {
   display: inline-block;
   vertical-align: middle;
@@ -280,7 +267,6 @@ a {
   text-decoration-style: dotted;
   text-decoration-color: var(--color-iris);
 }
-
 a:hover {
   color: var(--color-foam);
   text-decoration-color: var(--color-foam);
@@ -308,7 +294,6 @@ a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after {
   border: 1px solid var(--color-text);
   background: var(--color-highlight-low);
 }
-
 .text-link:hover {
   color: var(--color-foam);
   border: 1px solid var(--color-text);
@@ -322,16 +307,13 @@ a[href^="//"]:not([href*="sentimentalfuturist.net"]):not(.image-link):after {
   gap: 0.5rem;
   margin: 2rem 0;
 }
-
 .link-grid a {
   text-decoration: none;
 }
-
 .link-grid a:has(img) {
   border-block-end: none;
   text-decoration: none;
 }
-
 .link-grid a:has(img):hover {
   border-block-end: none;
   text-decoration: none;
@@ -366,7 +348,6 @@ input[type=button] {
   padding-inline-start: 2rem;
   padding-inline-end: 2rem;
 }
-
 button:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
@@ -387,11 +368,9 @@ textarea {
   box-sizing: border-box;
   resize: vertical;
 }
-
 textarea:not([cols]) {
   width: 100%;
 }
-
 textarea:not([rows]) {
   min-height: 40px;
   height: 140px;
@@ -422,7 +401,6 @@ textarea:focus {
   padding: 0;
   transition: all 0.5s ease;
 }
-
 #theme-toggle:hover {
   background-color: var(--color-surface);
   border-color: var(--color-foam);
@@ -438,7 +416,6 @@ body > header {
   position: relative;
   max-height: 1.5rem;
 }
-
 body > header h1 {
   font-size: 1rem;
   font-weight: 600;
@@ -449,7 +426,6 @@ body > header h1 {
   padding: 2px 0;
   margin: 0;
 }
-
 body > header h1:after {
   content: "‒ □ ✕";
   display: inline-block;
@@ -459,12 +435,12 @@ body > header h1:after {
   position: absolute;
   right: 10px;
 }
-
 @media only screen and (max-width: 330px) {
   body > header h1:after {
     content: "";
   }
 }
+
 footer {
   display: flex;
   justify-content: center;
@@ -477,7 +453,6 @@ footer {
   border-inline-end: 1px solid var(--color-rose);
   position: relative;
 }
-
 footer:after {
   content: "‒ □ ✕";
   display: inline-block;
@@ -487,7 +462,6 @@ footer:after {
   position: absolute;
   right: 10px;
 }
-
 footer nav ul.footer-links {
   list-style: none;
   padding: 1rem;
@@ -500,7 +474,6 @@ footer nav ul.footer-links {
   gap: 1.2rem;
   font-size: 0.9rem;
 }
-
 footer nav ul.footer-links li {
   display: inline;
 }
@@ -514,7 +487,6 @@ footer nav ul.footer-links li {
   padding: 0.5rem 1rem 2rem 1rem;
   border: 1px dotted var(--color-iris);
 }
-
 #guestbooks___guestbook-messages-container div blockquote {
   font-style: normal;
   border-inline-start: none;
@@ -541,7 +513,6 @@ details {
   border-radius: 6px;
   overflow: hidden;
 }
-
 details > :not(summary) {
   margin-top: 0;
 }
@@ -566,11 +537,9 @@ summary {
   cursor: pointer;
   outline: none;
 }
-
 summary::marker, summary::-webkit-details-marker {
   color: var(--color-text);
 }
-
 summary:hover, summary:focus {
   text-decoration: underline;
   text-decoration-style: dotted;
@@ -578,38 +547,34 @@ summary:hover, summary:focus {
 
 ul.two-column {
   -moz-column-count: 2;
-  column-count: 2;
+       column-count: 2;
   gap: 2rem;
 }
-
 ul.two-column li {
   -moz-column-break-inside: avoid;
-  break-inside: avoid-column;
+       break-inside: avoid-column;
 }
 
 @media only screen and (max-width: 600px) {
   ul.two-column {
     -moz-column-count: 1;
-    column-count: 1;
+         column-count: 1;
   }
 }
 li {
   list-style-type: none;
 }
-
 li::marker {
   content: "☐ ";
   font-weight: bold;
   font-size: 1.2rem;
 }
-
 li.completed::marker {
   content: "☑ ";
   font-weight: bold;
   font-size: 1.2rem;
   color: var(--color-muted);
 }
-
 li.completed > .label {
   color: var(--color-muted);
   text-decoration: line-through;
@@ -634,7 +599,6 @@ li.completed > .label {
   justify-content: space-between;
   gap: 1.5rem;
 }
-
 @media only screen and (max-width: 400px) {
   .toolbar {
     flex-direction: column-reverse;
@@ -644,11 +608,9 @@ li.completed > .label {
 .toolbar:not(:has(nav.breadcrumbs)) {
   justify-content: end;
 }
-
 .toolbar .breadcrumbs {
   flex: 1 1 auto;
 }
-
 .toolbar #theme-toggle {
   flex-shrink: 0;
 }
@@ -664,7 +626,6 @@ li.completed > .label {
   padding: 0.5rem 1rem;
   background: linear-gradient(to right, rgba(var(--color-rose-rgb), 0.1), rgba(var(--color-foam-rgb), 0.1));
 }
-
 @media only screen and (max-width: 400px) {
   .last-updated {
     align-items: center;
@@ -676,21 +637,19 @@ li.completed > .label {
   font-size: 1.2rem;
   color: var(--color-love);
 }
-
 @media only screen and (max-width: 400px) {
   .last-updated .changelog::before {
     content: "";
   }
 }
+
 .joined {
   text-align: center;
   margin: 2rem 0;
 }
-
 .joined > div {
   margin: 1.5rem 0;
 }
-
 .joined > div.sprites {
   margin-top: 1.5rem;
 }
@@ -702,7 +661,6 @@ svg.rss {
   text-decoration: none;
   fill: var(--color-iris);
 }
-
 svg.rss:hover {
   fill: var(--color-foam);
   transition: all 0.5s ease-in-out;
@@ -739,11 +697,9 @@ nav.breadcrumbs {
   align-items: center;
   margin-block-end: 1.5rem;
 }
-
 #euroring .widgetbox {
   height: auto;
 }
-
 #euroring a::after {
   content: "";
 }
@@ -840,6 +796,4 @@ nav.breadcrumbs {
   --color-highlight-high: rgb(72, 68, 104);
   --color-highlight-high-rgb: 72, 68, 104;
   --background: url("../img/dark.jpg") no-repeat center center fixed;
-} 
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
