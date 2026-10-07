@@ -16,6 +16,10 @@ h6 {
   margin-block: 1.5rem 0.5rem;
 }
 
+p, dd, dt, li, blockquote, q, pre, code, samp, time, nav.breadcrumbs, td, details, summary, figcaption {
+  line-height: 1.6;
+}
+
 blockquote,
 q {
   border-inline-start: 4px solid var(--color-rose);

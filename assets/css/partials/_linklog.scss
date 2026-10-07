@@ -79,6 +79,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  margin-top: 3rem;
   margin-bottom: 1.5rem;
   padding-bottom: 10px;
   border-bottom: 1px dotted var(--color-iris);
@@ -98,5 +99,4 @@
 .e-content {
   margin-top: 0.5rem;
   font-size: 0.95em;
-  line-height: 1.5;
 }

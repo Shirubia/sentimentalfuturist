@@ -14,7 +14,7 @@ body {
   background-color: var(--color-base);
   background: var(--background);
   background-size: cover;
-  max-width: 600px;
+  max-width: 680px;
   margin: 0 auto;
   padding: 1em;
   text-rendering: optimizeLegibility;
@@ -43,6 +43,10 @@ h4,
 h5,
 h6 {
   margin-block: 1.5rem 0.5rem;
+}
+
+p, dd, dt, li, blockquote, q, pre, code, samp, time, nav.breadcrumbs, td, details, summary, figcaption {
+  line-height: 1.6;
 }
 
 blockquote,
@@ -235,6 +239,7 @@ tbody tr:nth-child(even) {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  margin-top: 3rem;
   margin-bottom: 1.5rem;
   padding-bottom: 10px;
   border-bottom: 1px dotted var(--color-iris);
@@ -251,7 +256,6 @@ tbody tr:nth-child(even) {
 .e-content {
   margin-top: 0.5rem;
   font-size: 0.95em;
-  line-height: 1.5;
 }
 
 a {
